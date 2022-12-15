@@ -1,6 +1,8 @@
+import { Spacer } from '@nextui-org/react';
 import Head from 'next/head';
 import { Box } from './Box.jsx';
-import { NavBar } from './Navbar.jsx';
+import { Footer } from './Footer.jsx';
+import { Header } from './Header.jsx';
 
 export default function Layout({ children, title = 'JRM Portfolio' }) {
   return (
@@ -19,10 +21,12 @@ export default function Layout({ children, title = 'JRM Portfolio' }) {
           maxW: '100%',
         }}
       >
-        <header>
-          <NavBar />
-        </header>
+        <Header />
         {children}
+        <Spacer y={5} />
+        <footer>
+          <Footer />
+        </footer>
       </Box>
     </>
   );

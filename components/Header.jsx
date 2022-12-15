@@ -1,11 +1,11 @@
 import { Button, Navbar, Text, Link } from '@nextui-org/react';
 import { useState } from 'react';
 
-export const NavBar = () => {
+export const Header = () => {
   const [navstate, setNavState] = useState('home');
 
   return (
-    <Navbar isBordered variant="sticky">
+    <Navbar variant="sticky">
       <Navbar.Brand>
         <Text b color="inherit" weight="bold" size={22}>
           JRM
@@ -20,7 +20,7 @@ export const NavBar = () => {
       <Navbar.Content hideIn="xs" variant="underline">
         {navstate == 'home' ? (
           <Navbar.Link href="#" color="inherit" isActive>
-            Inicio
+            Página de Inicio
           </Navbar.Link>
         ) : (
           <Navbar.Link
@@ -28,33 +28,33 @@ export const NavBar = () => {
             color="inherit"
             onClick={() => setNavState('home')}
           >
-            Inicio
+            Página de Inicio
           </Navbar.Link>
         )}
         {navstate == 'projects' ? (
-          <Navbar.Link href="#" isActive color="inherit">
-            Proyectos
+          <Navbar.Link href="projects" isActive color="inherit">
+            Proyectos Web
           </Navbar.Link>
         ) : (
           <Navbar.Link
-            href="#"
+            href="projects"
             color="inherit"
             onClick={() => setNavState('projects')}
           >
-            Proyectos
+            Proyectos Web
           </Navbar.Link>
         )}
         {navstate == 'cv' ? (
-          <Navbar.Link href="#" isActive color="inherit">
-            Curriculum
+          <Navbar.Link href="curriculum" isActive color="inherit">
+            CV
           </Navbar.Link>
         ) : (
           <Navbar.Link
-            href="#"
+            href="curriculum"
             color="inherit"
             onClick={() => setNavState('cv')}
           >
-            Curriculum
+            CV
           </Navbar.Link>
         )}
       </Navbar.Content>

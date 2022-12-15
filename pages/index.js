@@ -2,29 +2,25 @@ import { Card, Grid, Spacer, Text } from '@nextui-org/react';
 import Image from 'next/image';
 import { Box } from '../components/Box';
 import Layout from '../components/Layout';
-import styles from '../styles/Home.module.css';
+import Gmail from '../public/SVGs/Gmail.svg';
+import Github from '../public/SVGs/Github.svg';
+import Linkedin from '../public/SVGs/Linkedin.svg';
+import Whatsapp from '../public/SVGs/Whatsapp.svg';
+import Link from 'next/link';
 
 export default function Home() {
   const frontendSkills = [
     'html5',
     'css3',
     'javascript',
-    'typescript',
-    'nextjs',
     'react',
-    'angular',
+    'nextjs',
     'mui',
     'nextui',
     'bootstrap',
   ];
-  const backendSkills = [
-    'nodejs',
-    'aspdotnet',
-    'mysql',
-    'posgresql',
-    'mongodb',
-  ];
-  const languajes = ['javascript', 'java', 'python', 'csharp', 'c++', 'c'];
+  const backendSkills = ['nodejs', 'aspdotnet', 'mysql', 'mongodb'];
+  const languajes = ['javascript', 'csharp', 'java', 'python'];
   const management = ['git', 'azureDevOps', 'jira', 'docker'];
   const technicalSupport = ['technicalSupport', 'cisco', 'virtualization'];
 
@@ -33,46 +29,110 @@ export default function Home() {
       <Box css={{ px: '$12', mt: '$8', '@xsMax': { px: '$10' } }}>
         <Grid.Container gap={2} justify="center">
           <Grid sm={10} md={7}>
-            <Grid sm={12} md={6} alignItems="center">
-              <div
+            <Grid
+              sm={12}
+              md={6}
+              alignItems="center"
+              justify="center"
+              style={{
+                display: 'block',
+                alignItems: 'center',
+                margin: '0 auto',
+              }}
+            >
+              <Grid sm={12} md={12} alignItems="center">
+                <div
+                  style={{
+                    borderRadius: '50%',
+                    overflow: 'hidden',
+                    width: '350px',
+                    height: '300px',
+                    textAlign: 'center',
+                    margin: '0 auto',
+                  }}
+                >
+                  <Image
+                    src="/perfil2.jpeg"
+                    alt="Foto pagina web juan rodriguez montero"
+                    width={350}
+                    height={300}
+                    quality={70}
+                  />
+                </div>
+              </Grid>
+              <Grid
+                sm={12}
+                md={6}
+                justify="center"
                 style={{
-                  borderRadius: '50%',
-                  overflow: 'hidden',
-                  width: '350px',
-                  height: '300px',
-                  textAlign: 'center',
+                  display: 'flex',
                   margin: '0 auto',
                 }}
               >
-                <Image
-                  src="/perfil.jpg"
-                  alt="Foto pagina web juan rodriguez montero"
-                  width={350}
-                  height={300}
-                  quality={70}
-                />
-              </div>
+                <Link
+                  style={{ marginRight: '14px' }}
+                  href="mailto:juanrm071299@gmail.com,juan.rodriguez@estudiantec.cr"
+                >
+                  <Gmail viewBox="0 0 45 45" />
+                </Link>
+                <Link
+                  style={{ marginRight: '14px' }}
+                  href="https://github.com/juanda0712"
+                  target="_black"
+                  rel="noreferrer"
+                >
+                  <Github viewBox="0 0 45 45" />
+                </Link>
+                <Link
+                  style={{ marginRight: '14px' }}
+                  href="https://www.linkedin.com/in/juanrodriguez07"
+                  target="_black"
+                  rel="noreferrer"
+                >
+                  <Linkedin viewBox="0 0 45 45" />
+                </Link>
+                <Link
+                  style={{ marginRight: '14px' }}
+                  href="https://wa.me/50660865957"
+                  target="_black"
+                  rel="noreferrer"
+                >
+                  <Whatsapp viewBox="0 0 45 45" />
+                </Link>
+              </Grid>
             </Grid>
-            <Grid sm={12} md={6} style={{ display: 'block' }}>
-              <Text>Hola Mundo! 👋, soy JuanDa.</Text>
-              <Spacer y={0.6} />
-              <Text>Apasionado de la tecnología desde que tengo memoria.</Text>
-              <Spacer y={0.6} />
-              <Text>
-                Me considero una persona muy curiosa, buen aprendiz y fácil de
-                trabajar.
+
+            <Grid
+              sm={12}
+              md={6}
+              style={{
+                display: 'block',
+                textAlign: 'center',
+              }}
+            >
+              <Text h1 size={35}>
+                Hola Mundo! 👋, soy JuanDa.
               </Text>
               <Spacer y={0.6} />
-              <Text>
-                Mi tiempo completo lo dedico a estudiar la carrera de ingeniería
-                en computadores en el Instituto Tecnológico de Costa Rica, a
+              <Text size={16}>
+                Apasionado de la tecnología desde que tengo memoria.
+              </Text>
+              <Spacer y={0.6} />
+              <Text size={16}>
+                Me considero una persona muy curiosa y un buen aprendiz con un
+                gran interés de trabajar en proyectos nuevos y demandantes.
+              </Text>
+              <Spacer y={0.6} />
+              <Text size={16}>
+                Mi tiempo lo dedico a estudiar la carrera de ingeniería en
+                computadores en el Instituto Tecnológico de Costa Rica,
                 desarrollar FrontEnd y BackEnd y mi tiempo libre lo dedico a mis
                 pasatiempos.
               </Text>
               <Spacer y={0.6} />
-              <Text>
-                Ajedrez ♟️ Video Juegos 🎮 Paseos por la montaña ⛰️ Gimnasio 💪
-                Música 🥁
+              <Text size={16}>
+                Ajedrez ♟️ Video Juegos 🎮 Anime 📺 Gimnasio 💪 Música 🥁
+                Montañar ⛰️
               </Text>
             </Grid>
           </Grid>
@@ -163,7 +223,7 @@ export default function Home() {
                 ))}
               </Grid.Container>
               <Spacer y={3} />
-              <Text h3>Technical Support</Text>
+              <Text h3>Soporte Técnico</Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
                 {technicalSupport.map((item, index) => (
