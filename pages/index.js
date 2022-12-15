@@ -7,8 +7,18 @@ import Github from '../public/SVGs/Github.svg';
 import Linkedin from '../public/SVGs/Linkedin.svg';
 import Whatsapp from '../public/SVGs/Whatsapp.svg';
 import Link from 'next/link';
+import { useContext, useEffect } from 'react';
+import { Store } from '../utils/Store';
+import Cookies from 'js-cookie';
 
 export default function Home() {
+  const { dispatch } = useContext(Store);
+
+  useEffect(() => {
+    dispatch({ type: 'NAV_UPDATE_NAVSTATE', payload: 'home' });
+    Cookies.set('nav', JSON.stringify({ navstate: 'home' }));
+  }, [dispatch]);
+
   const frontendSkills = [
     'html5',
     'css3',
@@ -101,7 +111,6 @@ export default function Home() {
                 </Link>
               </Grid>
             </Grid>
-
             <Grid
               sm={12}
               md={6}
@@ -120,7 +129,7 @@ export default function Home() {
               <Spacer y={0.6} />
               <Text size={16}>
                 Me considero una persona muy curiosa y un buen aprendiz con un
-                gran interés de trabajar en proyectos nuevos y demandantes.
+                gran interés de trabajar en proyectos exigentes y novedosos
               </Text>
               <Spacer y={0.6} />
               <Text size={16}>
@@ -152,7 +161,7 @@ export default function Home() {
               <Grid.Container gap={1} justify="flex-start">
                 {frontendSkills.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card>
+                    <Card variant="flat">
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/frontEndSkills/${item}.png`}
@@ -171,7 +180,7 @@ export default function Home() {
               <Grid.Container gap={1} justify="flex-start">
                 {backendSkills.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card>
+                    <Card variant="flat">
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/backEndSkills/${item}.png`}
@@ -190,7 +199,7 @@ export default function Home() {
               <Grid.Container gap={1} justify="flex-start">
                 {languajes.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card>
+                    <Card variant="flat">
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/languages/${item}.png`}
@@ -209,7 +218,7 @@ export default function Home() {
               <Grid.Container gap={1} justify="flex-start">
                 {management.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card>
+                    <Card variant="flat">
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/management/${item}.png`}
@@ -228,7 +237,7 @@ export default function Home() {
               <Grid.Container gap={1} justify="flex-start">
                 {technicalSupport.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card>
+                    <Card variant="flat">
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/support/${item}.png`}

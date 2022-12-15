@@ -1,8 +1,11 @@
-import { Button, Navbar, Text, Link } from '@nextui-org/react';
-import { useState } from 'react';
+import { Navbar, Text } from '@nextui-org/react';
+import { useContext } from 'react';
+import { Store } from '../utils/Store';
 
 export const Header = () => {
-  const [navstate, setNavState] = useState('home');
+  const { state } = useContext(Store);
+  const { nav } = state;
+  const { navstate } = nav;
 
   return (
     <Navbar variant="sticky">
@@ -18,42 +21,30 @@ export const Header = () => {
         </Text>
       </Navbar.Brand>
       <Navbar.Content hideIn="xs" variant="underline">
-        {navstate == 'home' ? (
-          <Navbar.Link href="#" color="inherit" isActive>
+        {navstate === 'home' ? (
+          <Navbar.Link href="/" color="inherit" isActive>
             Página de Inicio
           </Navbar.Link>
         ) : (
-          <Navbar.Link
-            href="#"
-            color="inherit"
-            onClick={() => setNavState('home')}
-          >
+          <Navbar.Link href="/" color="inherit">
             Página de Inicio
           </Navbar.Link>
         )}
-        {navstate == 'projects' ? (
+        {navstate === 'projects' ? (
           <Navbar.Link href="projects" isActive color="inherit">
             Proyectos Web
           </Navbar.Link>
         ) : (
-          <Navbar.Link
-            href="projects"
-            color="inherit"
-            onClick={() => setNavState('projects')}
-          >
+          <Navbar.Link href="projects" color="inherit">
             Proyectos Web
           </Navbar.Link>
         )}
-        {navstate == 'cv' ? (
+        {navstate === 'cv' ? (
           <Navbar.Link href="curriculum" isActive color="inherit">
             CV
           </Navbar.Link>
         ) : (
-          <Navbar.Link
-            href="curriculum"
-            color="inherit"
-            onClick={() => setNavState('cv')}
-          >
+          <Navbar.Link href="curriculum" color="inherit">
             CV
           </Navbar.Link>
         )}
