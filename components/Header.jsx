@@ -23,31 +23,43 @@ export const Header = () => {
       </Navbar.Brand>
       <Navbar.Content hideIn="xs" variant="underline">
         {navstate === 'home' ? (
-          <Navbar.Link as="div" color="inherit" isActive>
-            <Link href="/">Página de Inicio</Link>
+          <Navbar.Link as="div" isActive>
+            <Link href="/" style={{ color: 'black' }}>
+              Página de Inicio
+            </Link>
           </Navbar.Link>
         ) : (
-          <Navbar.Link as="div" color="inherit">
-            <Link href="/">Página de Inicio</Link>
+          <Navbar.Link as="div">
+            <Link href="/" style={{ color: 'black' }}>
+              Página de Inicio
+            </Link>
           </Navbar.Link>
         )}
         {navstate === 'projects' ? (
-          <Navbar.Link as="div" isActive color="inherit">
-            <Link href="projects">Proyectos Web</Link>
+          <Navbar.Link as="div" isActive>
+            <Link href="projects" style={{ color: 'black' }}>
+              Proyectos Web
+            </Link>
           </Navbar.Link>
         ) : (
-          <Navbar.Link as="div" color="inherit">
-            <Link href="projects">Proyectos Web</Link>
+          <Navbar.Link as="div">
+            <Link href="projects" style={{ color: 'black' }}>
+              Proyectos Web
+            </Link>
           </Navbar.Link>
         )}
 
         {navstate === 'cv' ? (
-          <Navbar.Link as="div" isActive color="inherit">
-            <Link href="curriculum">CV</Link>
+          <Navbar.Link as="div" isActive>
+            <Link href="curriculum" style={{ color: 'black' }}>
+              CV
+            </Link>
           </Navbar.Link>
         ) : (
-          <Navbar.Link as="div" color="inherit">
-            <Link href="curriculum">CV</Link>
+          <Navbar.Link as="div">
+            <Link href="curriculum" style={{ color: 'black' }}>
+              CV
+            </Link>
           </Navbar.Link>
         )}
       </Navbar.Content>

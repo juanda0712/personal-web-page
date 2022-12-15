@@ -18,7 +18,10 @@ export default function Layout({ children, title = 'JRM Portfolio' }) {
 
       <Box
         css={{
-          maxW: '100%',
+          display: 'flex',
+          minHeight: '100vh',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
         }}
       >
         <Header />
