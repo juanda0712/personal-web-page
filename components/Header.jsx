@@ -1,4 +1,5 @@
 import { Navbar, Text } from '@nextui-org/react';
+import Link from 'next/link';
 import { useContext } from 'react';
 import { Store } from '../utils/Store';
 
@@ -22,30 +23,31 @@ export const Header = () => {
       </Navbar.Brand>
       <Navbar.Content hideIn="xs" variant="underline">
         {navstate === 'home' ? (
-          <Navbar.Link href="/" color="inherit" isActive>
-            Página de Inicio
+          <Navbar.Link as="div" color="inherit" isActive>
+            <Link href="/">Página de Inicio</Link>
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="/" color="inherit">
-            Página de Inicio
+          <Navbar.Link as="div" color="inherit">
+            <Link href="/">Página de Inicio</Link>
           </Navbar.Link>
         )}
         {navstate === 'projects' ? (
-          <Navbar.Link href="projects" isActive color="inherit">
-            Proyectos Web
+          <Navbar.Link as="div" isActive color="inherit">
+            <Link href="projects">Proyectos Web</Link>
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="projects" color="inherit">
-            Proyectos Web
+          <Navbar.Link as="div" color="inherit">
+            <Link href="projects">Proyectos Web</Link>
           </Navbar.Link>
         )}
+
         {navstate === 'cv' ? (
-          <Navbar.Link href="curriculum" isActive color="inherit">
-            CV
+          <Navbar.Link as="div" isActive color="inherit">
+            <Link href="curriculum">CV</Link>
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="curriculum" color="inherit">
-            CV
+          <Navbar.Link as="div" color="inherit">
+            <Link href="curriculum">CV</Link>
           </Navbar.Link>
         )}
       </Navbar.Content>
