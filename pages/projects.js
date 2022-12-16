@@ -63,8 +63,8 @@ export default function Projects() {
                           <Grid xs={3} sm={4} key={tec} justify="center">
                             <Image
                               src={`/frontEndSkills/${tec}.png`}
-                              width={40}
-                              height={45}
+                              width={45}
+                              height={50}
                               alt={tec}
                             ></Image>
                           </Grid>
@@ -73,8 +73,8 @@ export default function Projects() {
                           <Grid xs={3} sm={4} key={tec} justify="center">
                             <Image
                               src={`/backEndSkills/${tec}.png`}
-                              width={40}
-                              height={45}
+                              width={45}
+                              height={50}
                               alt={tec}
                             ></Image>
                           </Grid>
