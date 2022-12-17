@@ -19,7 +19,26 @@ export default function CurriculumScreen() {
         },
         viewer.current
       ).then((instance) => {
-        instance.UI.disableElements(['ribbons']);
+        console.log(instance);
+        instance.UI.disableElements([
+          'printButton',
+          'saveAsButton',
+          'toolsOverlay',
+          'toolsButton',
+          'toolsHeader',
+          'freeTextToolButton',
+          'selectToolButton',
+          'panToolButton',
+          'annotationPopup',
+          'contextMenuPopup',
+          'textPopup',
+          'stylePopup',
+          'toolStylePopup',
+          'annotationStylePopup',
+          'ribbons',
+          'leftPanel',
+          'leftPanelButton',
+        ]);
         ins.current = instance;
       });
     });
