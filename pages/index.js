@@ -70,6 +70,7 @@ export default function Home() {
                   />
                 </div>
               </Grid>
+              <Spacer y={1} />
               <Grid
                 sm={12}
                 md={6}

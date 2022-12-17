@@ -23,7 +23,31 @@ export default function Projects() {
   return (
     <Layout>
       <Box css={{ px: '$12', mt: '$10', '@xsMax': { px: '$10' } }}>
-        <Grid.Container justify="center">
+        <Grid.Container
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Text h1 size={40}>
+              Proyectos
+            </Text>
+            <Text h2 size={20}>
+              Estos son algunos de mis proyectos web que puedes visitar
+            </Text>
+          </div>
+          <Spacer y={3} />
+
           <Grid sm={5} md={4} style={{ display: 'block' }}>
             {projects.map((project, index) => (
               <Link href={project.url} target="_blank" key={project.url}>
@@ -32,7 +56,7 @@ export default function Projects() {
                     <Card.Header>
                       <div>
                         <Text
-                          h2
+                          h3
                           css={{
                             textGradient:
                               '45deg, $yellow600 -20%, $red600 100%',
