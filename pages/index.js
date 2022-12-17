@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <Layout>
       <Box css={{ px: '$12', mt: '$8', '@xsMax': { px: '$10' } }}>
-        <Grid.Container gap={2} justify="center">
+        <Grid.Container justify="center">
           <Grid sm={10} md={7}>
             <Grid
               sm={12}
@@ -165,8 +165,8 @@ export default function Home() {
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/frontEndSkills/${item}.png`}
-                          width={80}
-                          height={75}
+                          width={65}
+                          height={65}
                           alt={item}
                         />
                       </Card.Body>
@@ -184,8 +184,8 @@ export default function Home() {
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/backEndSkills/${item}.png`}
-                          width={80}
-                          height={75}
+                          width={65}
+                          height={65}
                           alt={item}
                         />
                       </Card.Body>
@@ -203,8 +203,8 @@ export default function Home() {
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/languages/${item}.png`}
-                          width={80}
-                          height={75}
+                          width={65}
+                          height={65}
                           alt={item}
                         />
                       </Card.Body>
@@ -222,8 +222,8 @@ export default function Home() {
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/management/${item}.png`}
-                          width={80}
-                          height={75}
+                          width={65}
+                          height={65}
                           alt={item}
                         />
                       </Card.Body>
@@ -241,8 +241,8 @@ export default function Home() {
                       <Card.Body css={{ p: 0 }}>
                         <Card.Image
                           src={`/support/${item}.png`}
-                          width={80}
-                          height={75}
+                          width={65}
+                          height={65}
                           alt={item}
                         />
                       </Card.Body>

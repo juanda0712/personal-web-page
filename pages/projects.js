@@ -1,4 +1,4 @@
-import { Card, Grid, Text } from '@nextui-org/react';
+import { Card, Grid, Spacer, Text } from '@nextui-org/react';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -23,7 +23,7 @@ export default function Projects() {
   return (
     <Layout>
       <Box css={{ px: '$12', mt: '$10', '@xsMax': { px: '$10' } }}>
-        <Grid.Container gap={2} justify="center">
+        <Grid.Container justify="center">
           <Grid sm={5} md={4} style={{ display: 'block' }}>
             {projects.map((project, index) => (
               <Link href={project.url} target="_blank" key={project.url}>
@@ -45,26 +45,25 @@ export default function Projects() {
                       </div>
                     </Card.Header>
                     <Card.Body>
-                      <Card.Image
+                      <Image
                         src={`/projects/${project.image}.png`}
                         priority={index === 0 ? 'true' : 'false'}
                         width={400}
                         height={350}
                         alt={project.title}
-                        placeholder="blur"
                         autoResize
                         quality={80}
                         layout="responsive"
                       />
                     </Card.Body>
                     <Card.Footer css={{ justifyItems: 'flex-start' }}>
-                      <Grid.Container gap={0.5} justify="center">
+                      <Grid.Container justify="center" gap={0.5}>
                         {project.technologies.frontend.map((tec) => (
                           <Grid xs={3} sm={4} key={tec} justify="center">
                             <Image
                               src={`/frontEndSkills/${tec}.png`}
-                              width={45}
-                              height={50}
+                              width={40}
+                              height={45}
                               alt={tec}
                             ></Image>
                           </Grid>
@@ -73,8 +72,8 @@ export default function Projects() {
                           <Grid xs={3} sm={4} key={tec} justify="center">
                             <Image
                               src={`/backEndSkills/${tec}.png`}
-                              width={45}
-                              height={50}
+                              width={40}
+                              height={45}
                               alt={tec}
                             ></Image>
                           </Grid>
@@ -83,6 +82,7 @@ export default function Projects() {
                     </Card.Footer>
                   </Card>
                 </Grid>
+                <Spacer y={2} />
               </Link>
             ))}
           </Grid>

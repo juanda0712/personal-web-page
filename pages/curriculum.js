@@ -3,8 +3,10 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import { Button, Grid } from '@nextui-org/react';
 import { Store } from '../utils/Store';
 import Cookies from 'js-cookie';
+import { useMediaQuery } from '../components/useMediaQuery';
 
 export default function CurriculumScreen() {
+  const isMd = useMediaQuery(960);
   const viewer = useRef(null);
   const ins = useRef();
   const { dispatch } = useContext(Store);
@@ -73,18 +75,24 @@ export default function CurriculumScreen() {
             onClick={() => setCurriculumLanguage('eng')}
             style={{ background: 'black' }}
           >
-            CV English
+            Ingles CV
           </Button>
           <Button
             onClick={() => setCurriculumLanguage('esp')}
             style={{ background: 'black' }}
           >
-            CV Spanish
+            Español CV
           </Button>
         </Grid>
-        <Grid justify="center">
-          <div ref={viewer} style={{ height: '100vh', width: '100vh' }} />
-        </Grid>
+        {isMd ? (
+          <Grid justify="center">
+            <div ref={viewer} style={{ height: '100vh' }} />
+          </Grid>
+        ) : (
+          <Grid justify="center">
+            <div ref={viewer} style={{ height: '100vh', width: '100vh' }} />
+          </Grid>
+        )}
       </Grid.Container>
     </Layout>
   );

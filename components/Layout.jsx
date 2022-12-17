@@ -1,6 +1,5 @@
 import { Spacer } from '@nextui-org/react';
 import Head from 'next/head';
-import { Box } from './Box.jsx';
 import { Footer } from './Footer.jsx';
 import { Header } from './Header.jsx';
 
@@ -15,9 +14,8 @@ export default function Layout({ children, title = 'JRM Portfolio' }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Box
-        css={{
+      <div
+        style={{
           display: 'flex',
           minHeight: '100vh',
           flexDirection: 'column',
@@ -25,12 +23,22 @@ export default function Layout({ children, title = 'JRM Portfolio' }) {
         }}
       >
         <Header />
-        {children}
-        <Spacer y={5} />
+        <main
+          style={{
+            width: '100%',
+            margin: 'auto',
+            marginTop: '1rem',
+            padding: '1rem 1rem',
+          }}
+        >
+          {children}
+        </main>
+        <Spacer y={6} />
+
         <footer>
           <Footer />
         </footer>
-      </Box>
+      </div>
     </>
   );
 }
