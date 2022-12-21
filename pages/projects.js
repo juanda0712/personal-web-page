@@ -47,9 +47,9 @@ export default function Projects() {
         <Spacer y={3} />
 
         <Grid sm={5} md={4} style={{ display: 'block' }}>
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Link href={project.url} target="_blank" key={project.url}>
-              <Grid xs={8} md={8}>
+              <Grid xs={12} md={12}>
                 <Card isPressable style={{ backgroundColor: '#e0e0e0' }}>
                   <Card.Header>
                     <div>
@@ -68,13 +68,11 @@ export default function Projects() {
                   <Card.Body>
                     <Image
                       src={`/projects/${project.image}.png`}
-                      priority={index === 0 ? 'true' : 'false'}
                       width={400}
                       height={350}
                       alt={project.title}
                       autoResize
                       quality={80}
-                      layout="responsive"
                     />
                   </Card.Body>
                   <Card.Footer css={{ justifyItems: 'flex-start' }}>
