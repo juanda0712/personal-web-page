@@ -50,7 +50,7 @@ export const Header = () => {
               href="projects"
               style={{ color: 'black', fontWeight: 'bold' }}
             >
-              Proyectos Web
+              Proyectos
             </Link>
           </Navbar.Link>
         ) : (
