@@ -7,14 +7,14 @@ import Whatsapp from '../public/SVGs/Whatsapp.svg';
 export const Footer = () => {
   return (
     <>
-      <Grid.Container justify="center" style={{ backgroundColor: '#B4B8BD' }}>
+      <Grid.Container justify="center" style={{ backgroundColor: '#e0e0e0' }}>
         <Grid sm={12} md={12} justify="center">
           <Text style={{ textAlign: 'center' }}>
             Si tiene interes en trabajar conmigo en sus proyectos, no dude en
             contactarme
           </Text>
         </Grid>
-        <Spacer y={1} />
+        <Spacer y={0.5} />
         <Grid sm={12} md={12} justify="center" style={{ display: 'flex' }}>
           <Link
             style={{ marginRight: '14px' }}
@@ -47,7 +47,7 @@ export const Footer = () => {
             <Whatsapp viewBox="0 0 45 45" />
           </Link>
         </Grid>
-        <Spacer y={1} />
+        <Spacer y={0.5} />
 
         <Grid sm={12} md={12} justify="center">
           <Text>© 2022 Juan Rodríguez Montero</Text>

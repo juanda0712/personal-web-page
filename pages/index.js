@@ -20,22 +20,20 @@ export default function Home() {
   }, [dispatch]);
 
   const frontendSkills = [
-    'html5',
-    'css3',
     'javascript',
     'react',
     'nextjs',
+    'tailwind',
     'mui',
     'nextui',
-    'bootstrap',
   ];
-  const backendSkills = ['nodejs', 'aspdotnet', 'mysql', 'mongodb'];
+  const backendSkills = ['nodejs', 'aspdotnet2', 'mysql', 'mongodb'];
   const languajes = ['javascript', 'csharp', 'java', 'python'];
-  const management = ['git', 'azureDevOps', 'jira', 'docker'];
-  const technicalSupport = ['technicalSupport', 'cisco', 'virtualization'];
+  const management = ['git2', 'azureDevOps2', 'jira2', 'docker2'];
+  const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization'];
 
   return (
-    <Layout>
+    <Layout title="Home">
       <Box css={{ px: '$12', mt: '$8', '@xsMax': { px: '$10' } }}>
         <Grid.Container justify="center">
           <Grid sm={10} md={7}>
@@ -54,6 +52,8 @@ export default function Home() {
                 <div
                   style={{
                     borderRadius: '50%',
+                    borderStyle: 'solid',
+                    borderColor: 'white',
                     overflow: 'hidden',
                     width: '350px',
                     height: '300px',
@@ -120,27 +120,28 @@ export default function Home() {
                 textAlign: 'center',
               }}
             >
-              <Text h1 size={35}>
-                Hola Mundo! 👋, soy JuanDa.
+              <Text h1 size={35} color="white">
+                Hola Mundo! 👋, soy JuanDa
               </Text>
               <Spacer y={0.6} />
-              <Text size={16}>
-                Apasionado de la tecnología desde que tengo memoria.
+              <Text size={16} color="white">
+                Apasionado de la tecnología desde que tengo memoria
               </Text>
               <Spacer y={0.6} />
-              <Text size={16}>
-                Me considero una persona muy curiosa y un buen aprendiz con un
-                gran interés de trabajar en proyectos exigentes y novedosos
+              <Text size={16} color="white">
+                Me considero una persona muy curiosa y de aprendizaje rapido,
+                con un gran interés de trabajar en proyectos exigentes y
+                novedosos
               </Text>
               <Spacer y={0.6} />
-              <Text size={16}>
+              <Text size={16} color="white">
                 Mi tiempo lo dedico a estudiar la carrera de ingeniería en
                 computadores en el Instituto Tecnológico de Costa Rica,
                 desarrollar FrontEnd y BackEnd y mi tiempo libre lo dedico a mis
-                pasatiempos.
+                pasatiempos
               </Text>
               <Spacer y={0.6} />
-              <Text size={16}>
+              <Text size={16} color="white">
                 Ajedrez ♟️ Video Juegos 🎮 Anime 📺 Gimnasio 💪 Música 🥁
                 Montañar ⛰️
               </Text>
@@ -154,100 +155,92 @@ export default function Home() {
                 width={50}
                 height={50}
               ></Image>
-              <Text h2>&nbsp; Habilidades</Text>
+              <Text h2 color="white">
+                &nbsp; Habilidades
+              </Text>
             </Grid>
             <Grid sm={12} md={12} style={{ display: 'block' }}>
-              <Text h3>FrontEnd</Text>
+              <Text h3 color="white">
+                FrontEnd
+              </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
                 {frontendSkills.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card variant="flat">
-                      <Card.Body css={{ p: 0 }}>
-                        <Card.Image
-                          src={`/frontEndSkills/${item}.png`}
-                          width={65}
-                          height={65}
-                          alt={item}
-                        />
-                      </Card.Body>
-                    </Card>
+                    <Image
+                      src={`/frontEndSkills/${item}.png`}
+                      width={65}
+                      height={65}
+                      alt={item}
+                    />
                   </Grid>
                 ))}
               </Grid.Container>
               <Spacer y={3} />
-              <Text h3>BackEnd</Text>
+              <Text h3 color="white">
+                BackEnd
+              </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
                 {backendSkills.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card variant="flat">
-                      <Card.Body css={{ p: 0 }}>
-                        <Card.Image
-                          src={`/backEndSkills/${item}.png`}
-                          width={65}
-                          height={65}
-                          alt={item}
-                        />
-                      </Card.Body>
-                    </Card>
+                    <Image
+                      src={`/backEndSkills/${item}.png`}
+                      width={65}
+                      height={65}
+                      alt={item}
+                    />
                   </Grid>
                 ))}
               </Grid.Container>
               <Spacer y={3} />
-              <Text h3>Lenguajes Conocidos</Text>
+              <Text h3 color="white">
+                Lenguajes Conocidos
+              </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
                 {languajes.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card variant="flat">
-                      <Card.Body css={{ p: 0 }}>
-                        <Card.Image
-                          src={`/languages/${item}.png`}
-                          width={65}
-                          height={65}
-                          alt={item}
-                        />
-                      </Card.Body>
-                    </Card>
+                    <Image
+                      src={`/languages/${item}.png`}
+                      width={65}
+                      height={65}
+                      alt={item}
+                    />
                   </Grid>
                 ))}
               </Grid.Container>
               <Spacer y={3} />
-              <Text h3>Gestión</Text>
+              <Text h3 color="white">
+                Gestión
+              </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
                 {management.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card variant="flat">
-                      <Card.Body css={{ p: 0 }}>
-                        <Card.Image
-                          src={`/management/${item}.png`}
-                          width={65}
-                          height={65}
-                          alt={item}
-                        />
-                      </Card.Body>
-                    </Card>
+                    <Image
+                      src={`/management/${item}.png`}
+                      width={65}
+                      height={65}
+                      alt={item}
+                    />
                   </Grid>
                 ))}
               </Grid.Container>
               <Spacer y={3} />
-              <Text h3>Soporte Técnico</Text>
+              <Text h3 color="white">
+                Soporte Técnico
+              </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
                 {technicalSupport.map((item, index) => (
                   <Grid xs={3} sm={2} key={index}>
-                    <Card variant="flat">
-                      <Card.Body css={{ p: 0 }}>
-                        <Card.Image
-                          src={`/support/${item}.png`}
-                          width={65}
-                          height={65}
-                          alt={item}
-                        />
-                      </Card.Body>
-                    </Card>
+                    <Image
+                      src={`/support/${item}.png`}
+                      width={65}
+                      height={65}
+                      alt={item}
+                    />
                   </Grid>
                 ))}
               </Grid.Container>

@@ -1,4 +1,4 @@
-import { Avatar, Dropdown, Navbar, Text } from '@nextui-org/react';
+import { Navbar, Text } from '@nextui-org/react';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { Store } from '../utils/Store';
@@ -33,40 +33,52 @@ export const Header = () => {
       <Navbar.Content hideIn="xs" variant="underline">
         {navstate === 'home' ? (
           <Navbar.Link as="div" isActive>
-            <Link href="/" style={{ color: 'black' }}>
+            <Link href="/" style={{ color: 'black', fontWeight: 'bold' }}>
               Página de Inicio
             </Link>
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
-            <Link href="/" style={{ color: 'black' }}>
+            <Link href="/" style={{ color: 'black', fontWeight: 'bold' }}>
               Página de Inicio
             </Link>
           </Navbar.Link>
         )}
         {navstate === 'projects' ? (
           <Navbar.Link as="div" isActive>
-            <Link href="projects" style={{ color: 'black' }}>
+            <Link
+              href="projects"
+              style={{ color: 'black', fontWeight: 'bold' }}
+            >
               Proyectos Web
             </Link>
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
-            <Link href="projects" style={{ color: 'black' }}>
-              Proyectos Web
+            <Link
+              href="projects"
+              style={{ color: 'black', fontWeight: 'bold' }}
+            >
+              Proyectos
             </Link>
           </Navbar.Link>
         )}
 
         {navstate === 'cv' ? (
           <Navbar.Link as="div" isActive>
-            <Link href="curriculum" style={{ color: 'black' }}>
+            <Link
+              href="curriculum"
+              style={{ color: 'black', fontWeight: 'bold' }}
+            >
               CV
             </Link>
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
-            <Link href="curriculum" style={{ color: 'black' }}>
+            <Link
+              href="curriculum"
+              style={{ color: 'black', fontWeight: 'bold' }}
+            >
               CV
             </Link>
           </Navbar.Link>

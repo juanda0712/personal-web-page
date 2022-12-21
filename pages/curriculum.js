@@ -17,7 +17,7 @@ export default function CurriculumScreen() {
       WebViewer(
         {
           path: '/lib',
-          initialDoc: '/files/demo.pdf',
+          initialDoc: '/files/cv ingles.pdf',
         },
         viewer.current
       ).then((instance) => {
@@ -53,14 +53,16 @@ export default function CurriculumScreen() {
 
   useEffect(() => {
     const pdfSrc =
-      curriculumLanguage === 'eng' ? '/files/demo.pdf' : '/files/lol.pdf';
+      curriculumLanguage === 'eng'
+        ? '/files/cv ingles.pdf'
+        : '/files/cv español.pdf';
     if (ins.current) {
       ins.current.loadDocument(pdfSrc);
     }
   }, [curriculumLanguage]);
 
   return (
-    <Layout>
+    <Layout title="CV">
       <Grid.Container
         gap={2}
         style={{
@@ -73,13 +75,13 @@ export default function CurriculumScreen() {
         <Grid style={{ display: 'inline-flex', flexWrap: 'wrap', gap: '10px' }}>
           <Button
             onClick={() => setCurriculumLanguage('eng')}
-            style={{ background: 'black' }}
+            style={{ background: 'e0e0e0', color: '002354' }}
           >
             Ingles CV
           </Button>
           <Button
             onClick={() => setCurriculumLanguage('esp')}
-            style={{ background: 'black' }}
+            style={{ background: 'e0e0e0', color: '002354' }}
           >
             Español CV
           </Button>
