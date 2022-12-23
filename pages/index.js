@@ -28,7 +28,7 @@ export default function Home() {
     'nextui',
   ];
   const backendSkills = ['nodejs', 'aspdotnet2', 'mysql', 'mongodb'];
-  const languajes = ['javascript', 'csharp', 'java', 'python'];
+  const languajes = ['javascript', 'csharp','c++', 'java', 'python'];
   const management = ['git2', 'azureDevOps2', 'jira2', 'docker2'];
   const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization'];
 
@@ -67,6 +67,7 @@ export default function Home() {
                     width={350}
                     height={300}
                     quality={70}
+                    priority={true}
                   />
                 </div>
               </Grid>
