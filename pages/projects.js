@@ -38,10 +38,10 @@ export default function Projects() {
           }}
         >
           <Text h1 size={40} color="white">
-            Proyectos Web
+            Web Projects
           </Text>
           <Text h2 size={20} color="white">
-            Estos son algunos de mis proyectos web que puedes visitar
+            These are some of my web projects that you can visit
           </Text>
         </div>
         <Spacer y={3} />

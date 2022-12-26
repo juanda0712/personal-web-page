@@ -77,13 +77,13 @@ export default function CurriculumScreen() {
             onClick={() => setCurriculumLanguage('eng')}
             style={{ background: 'e0e0e0', color: '002354' }}
           >
-            Ingles CV
+            English CV
           </Button>
           <Button
             onClick={() => setCurriculumLanguage('esp')}
             style={{ background: 'e0e0e0', color: '002354' }}
           >
-            Español CV
+            Spanish CV
           </Button>
         </Grid>
         {isMd ? (

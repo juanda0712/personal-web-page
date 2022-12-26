@@ -3,7 +3,7 @@ const data = {
     {
       title: 'Next Tailwind Amazona',
       description:
-        'Este es un proyecto web en el que se creó una página web para E-commerce con tecnología de SSR (server side rendering) y la interfaz utiliza los estilos de Tailwind ',
+        'This is a web project for E-commerce, was created with SSR (server side rendering) technology and Tailwind CSS styles were used ',
       image: 'amazona',
       technologies: {
         backend: ['nodejs', 'mongodb'],
@@ -14,7 +14,7 @@ const data = {
     {
       title: 'Giffy',
       description:
-        'Proyecto web que consume un API profesional de una página de gifs muy conocida llamada GIPHY',
+        'Web project that consumes a professional API from a well-known gif page called GIPHY',
       image: 'giffy',
       technologies: {
         backend: [],
@@ -25,7 +25,7 @@ const data = {
     {
       title: 'XKCD Comics',
       description:
-        'Este proyecto utiliza la información que recolecta un scraper muy sencillo que se creó y que extrae los comics de una pseudo api de la página web de un artista',
+        'This project uses the information collected by a very simple scraper that was created and that extracts the comics from a pseudo api created by the artist',
       image: 'xkcd',
       technologies: {
         backend: ['nodejs'],
@@ -36,7 +36,7 @@ const data = {
     {
       title: 'Blog JuanDa',
       description:
-        'Es un proyecto muy básico para crear una estructura de blogs básica',
+        'It is a very basic project to create a basic blog structure',
       image: 'basicBlog',
       technologies: {
         backend: [],

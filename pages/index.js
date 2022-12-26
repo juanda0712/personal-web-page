@@ -122,29 +122,28 @@ export default function Home() {
               }}
             >
               <Text h1 size={35} color="white">
-                Hola Mundo! 👋, soy JuanDa
+                Hello World! 👋, I&apos;m JuanDa
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Apasionado de la tecnología desde que tengo memoria
+                Passionate about technology since I can remember
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Me considero una persona muy curiosa y de aprendizaje rapido,
-                con un gran interés de trabajar en proyectos exigentes y
-                novedosos
+                I consider myself a very curious person and a quick learner.
+                with a great interest in working on demanding and
+                new projects
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Mi tiempo lo dedico a estudiar la carrera de ingeniería en
-                computadores en el Instituto Tecnológico de Costa Rica,
-                desarrollar FrontEnd y BackEnd y mi tiempo libre lo dedico a mis
-                pasatiempos
+                I spend my time studying computer engineering at Instituto 
+                Tecnologico de Costa Rica, to develop 
+                FrontEnd & BackEnd and my free time is dedicaded to my hobbies
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Ajedrez ♟️ Video Juegos 🎮 Anime 📺 Gimnasio 💪 Música 🥁
-                Montañar ⛰️
+                Chess ♟️ Video Games 🎮 Anime 📺 Gym 💪 Music 🥁
+                Hiking⛰️
               </Text>
             </Grid>
           </Grid>
@@ -157,7 +156,7 @@ export default function Home() {
                 height={50}
               ></Image>
               <Text h2 color="white">
-                &nbsp; Habilidades
+                &nbsp; SKILLS
               </Text>
             </Grid>
             <Grid sm={12} md={12} style={{ display: 'block' }}>
@@ -196,7 +195,7 @@ export default function Home() {
               </Grid.Container>
               <Spacer y={3} />
               <Text h3 color="white">
-                Lenguajes Conocidos
+                Used Languages
               </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
@@ -213,7 +212,7 @@ export default function Home() {
               </Grid.Container>
               <Spacer y={3} />
               <Text h3 color="white">
-                Gestión
+                Management
               </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">
@@ -230,7 +229,7 @@ export default function Home() {
               </Grid.Container>
               <Spacer y={3} />
               <Text h3 color="white">
-                Soporte Técnico
+                Technical Support
               </Text>
               <Spacer y={1} />
               <Grid.Container gap={1} justify="flex-start">

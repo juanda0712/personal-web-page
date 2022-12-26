@@ -9,9 +9,9 @@ export const Footer = () => {
     <>
       <Grid.Container justify="center" style={{ backgroundColor: '#e0e0e0' }}>
         <Grid sm={12} md={12} justify="center">
-          <Text style={{ textAlign: 'center' }}>
-            Si tiene interes en trabajar conmigo en sus proyectos, no dude en
-            contactarme
+          <Text style={{ textAlign: 'center' }}>      
+            If you are interested in working with me on your projects, please do not hesitate to
+            contact me
           </Text>
         </Grid>
         <Spacer y={0.5} />
