@@ -30,7 +30,7 @@ export default function Home() {
   const backendSkills = ['nodejs', 'aspdotnet2', 'mysql', 'mongodb'];
   const languajes = ['javascript', 'csharp','c++', 'java', 'python'];
   const management = ['git2', 'azureDevOps2', 'jira2', 'docker2'];
-  const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization'];
+  const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization','office365'];
 
   return (
     <Layout title="Home">
@@ -136,9 +136,9 @@ export default function Home() {
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                I spend my time studying computer engineering at Instituto 
-                Tecnologico de Costa Rica, to develop 
-                FrontEnd & BackEnd and my free time is dedicaded to my hobbies
+                I spend my time studying computer engineering, developing 
+                FrontEnd & BackEnd, lately helping my father to recollect his 
+                coffee ☕ and my free time is dedicaded to my hobbies
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">

@@ -45,6 +45,22 @@ const data = {
       url: 'https://basic-blog-roan.vercel.app/',
     },
   ],
+  desktop: [
+    {
+      title: 'Image Recovery',
+      description:
+        'In this academic project we develop a system that retrieves an image using the generic algorithm ',
+      src: 'projects/videos/imageRecovery',
+      language: ['c++'],
+    },
+    {
+      title: 'Breakout',
+      description:
+        'This project was designed with the client-server architecture in Java and implemented data structures and pattern designs. ',
+      src: 'projects/videos/breakout',
+      language: ['java'],
+    }
+  ],
 };
 
 export default data;

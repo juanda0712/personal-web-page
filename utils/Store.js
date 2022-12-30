@@ -4,7 +4,7 @@ import { createContext, useReducer } from 'react';
 export const Store = createContext();
 
 const initialState = {
-  nav: Cookies.get('nav') ? JSON.parse(Cookies.get('nav')) : { navstate: '' },
+  nav: Cookies.get('nav') ? JSON.parse(Cookies.get('nav')) : { navstate: 'home' },
 };
 
 function reducer(state, action) {

@@ -33,7 +33,7 @@ export default function Layout({ children, title }) {
         >
           {children}
         </main>
-        <Spacer y={6} />
+        <Spacer y={4} />
 
         <footer>
           <Footer />

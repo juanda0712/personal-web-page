@@ -9,7 +9,7 @@ import { Store } from '../utils/Store';
 
 export default function Projects() {
   const { dispatch } = useContext(Store);
-  const { projects } = data;
+  const { projects, desktop } = data;
 
   useEffect(() => {
     dispatch({
@@ -21,15 +21,7 @@ export default function Projects() {
 
   return (
     <Layout title="Projects">
-      <Grid.Container
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <div
+      <div
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -38,19 +30,18 @@ export default function Projects() {
           }}
         >
           <Text h1 size={40} color="white">
-            Web Projects
+            Web Projects - Personal
           </Text>
           <Text h2 size={20} color="white">
-            These are some of my web projects that you can visit
+            These are some of my most recent web projects that you can visit
           </Text>
         </div>
-        <Spacer y={3} />
-
-        <Grid sm={5} md={4} style={{ display: 'block' }}>
+        <Spacer y={2} />
+      <Grid.Container justify="center">
           {projects.map((project) => (
-            <Link href={project.url} target="_blank" key={project.url}>
-              <Grid xs={12} md={12}>
-                <Card isPressable style={{ backgroundColor: '#e0e0e0' }}>
+            <Grid  xs={12} md={6} key={project.url} justify='center'>
+            <Link href={project.url} target="_blank" >
+                <Card isPressable style={{ backgroundColor: '#e0e0e0', width: 400, height: 650 }}>
                   <Card.Header>
                     <div>
                       <Text
@@ -68,7 +59,7 @@ export default function Projects() {
                   <Card.Body>
                     <Image
                       src={`/projects/${project.image}.png`}
-                      width={400}
+                      width={360}
                       height={350}
                       alt={project.title}
                       autoResize
@@ -100,11 +91,67 @@ export default function Projects() {
                     </Grid.Container>
                   </Card.Footer>
                 </Card>
-              </Grid>
               <Spacer y={2} />
             </Link>
+            </Grid>
           ))}
-        </Grid>
+      </Grid.Container>
+      <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Text h1 size={40} color="white">
+            Desktop Projects - Academic
+          </Text>
+          <Text h2 size={20} color="white">
+            These are some of my desktop projects that you can watch
+          </Text>
+        </div>
+        <Spacer y={2} />
+        <Grid.Container justify="center">
+          {desktop.map((project) => (
+            <Grid  xs={12} md={6} key={project.title} justify='center'>
+                <Card style={{ backgroundColor: '#e0e0e0', width: 450, height: 550 }}>
+                  <Card.Header>
+                    <div>
+                      <Text
+                        h3
+                        css={{
+                          textGradient: '45deg, $yellow600 -20%, $red600 100%',
+                        }}
+                        weight="bold"
+                      >
+                        {project.title}
+                      </Text>
+                      <Text>{project.description}</Text>
+                    </div>
+                  </Card.Header>
+                  <Card.Body>
+                    <video  height="300" controls >
+                      <source src={`${project.src}.mp4`} type="video/mp4"/>
+                    </video>
+                  </Card.Body>
+                  <Card.Footer css={{ justifyItems: 'flex-start' }}>
+                    <Grid.Container justify="center" gap={0.5}>
+                      {project.language.map((tec) => (
+                        <Grid xs={3} sm={4} key={tec} justify="center">
+                          <Image
+                            src={`/languages/${tec}.png`}
+                            width={55}
+                            height={60}
+                            alt={tec}
+                          ></Image>
+                        </Grid>
+                      ))}
+                    </Grid.Container>
+                  </Card.Footer>
+                </Card>
+            </Grid>
+          ))}
       </Grid.Container>
     </Layout>
   );

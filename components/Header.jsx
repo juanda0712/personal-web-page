@@ -33,7 +33,7 @@ export const Header = () => {
       <Navbar.Content hideIn="xs" variant="underline">
         {navstate === 'home' ? (
           <Navbar.Link as="div" isActive>
-            <Link href="/" style={{ color: 'black', fontWeight: 'bold' }}>
+            <Link href="/" style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}>
               Home Page
             </Link>
           </Navbar.Link>
@@ -48,7 +48,7 @@ export const Header = () => {
           <Navbar.Link as="div" isActive>
             <Link
               href="projects"
-              style={{ color: 'black', fontWeight: 'bold' }}
+              style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
             >
               Projects
             </Link>
@@ -68,7 +68,7 @@ export const Header = () => {
           <Navbar.Link as="div" isActive>
             <Link
               href="curriculum"
-              style={{ color: 'black', fontWeight: 'bold' }}
+              style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
             >
               CV
             </Link>

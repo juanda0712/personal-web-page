@@ -1,4 +1,4 @@
-import { Button, Navbar, Text, Link, Grid, Spacer } from '@nextui-org/react';
+import { Text, Link, Grid, Spacer } from '@nextui-org/react';
 import Gmail from '../public/SVGs/Gmail.svg';
 import Github from '../public/SVGs/Github.svg';
 import Linkedin from '../public/SVGs/Linkedin.svg';
@@ -20,7 +20,7 @@ export const Footer = () => {
             style={{ marginRight: '14px' }}
             href="mailto:juanrm071299@gmail.com,juan.rodriguez@estudiantec.cr"
           >
-            <Gmail viewBox="0 0 45 45" />
+            <Gmail viewBox="0 0 50 50" />
           </Link>
           <Link
             style={{ marginRight: '14px' }}
@@ -28,7 +28,7 @@ export const Footer = () => {
             target="_black"
             rel="noreferrer"
           >
-            <Github viewBox="0 0 45 45" />
+            <Github viewBox="0 0 50 50" />
           </Link>
           <Link
             style={{ marginRight: '14px' }}
@@ -36,7 +36,7 @@ export const Footer = () => {
             target="_black"
             rel="noreferrer"
           >
-            <Linkedin viewBox="0 0 45 45" />
+            <Linkedin viewBox="0 0 50 50" />
           </Link>
           <Link
             style={{ marginRight: '14px' }}
@@ -44,7 +44,7 @@ export const Footer = () => {
             target="_black"
             rel="noreferrer"
           >
-            <Whatsapp viewBox="0 0 45 45" />
+            <Whatsapp viewBox="0 0 50 50" />
           </Link>
         </Grid>
         <Spacer y={0.5} />
