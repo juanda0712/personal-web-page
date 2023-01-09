@@ -23,14 +23,11 @@ export default function Home() {
     'javascript',
     'react',
     'nextjs',
-    'tailwind',
-    'mui',
-    'nextui',
   ];
   const backendSkills = ['nodejs', 'aspdotnet2', 'mysql', 'mongodb'];
-  const languajes = ['javascript', 'csharp','c++', 'java', 'python'];
-  const management = ['git2', 'azureDevOps2', 'jira2', 'docker2'];
-  const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization','office365'];
+  const languajes = ['javascript', 'csharp','c++', 'java'];
+  const management = ['git2', 'azureDevOps', 'docker'];
+  const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization','office365', 'linux'];
 
   return (
     <Layout title="Home">
@@ -130,120 +127,20 @@ export default function Home() {
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                I consider myself a very curious person and a quick learner.
+                Very curious person and a quick learner.
                 with a great interest in working on demanding and
-                new projects
+                new projects that have a positive impact on productivity
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                I spend my time studying computer engineering, developing 
-                FrontEnd & BackEnd, lately helping my father to recollect his 
-                coffee ☕ and my free time is dedicaded to my hobbies
+                Currently, I spend my time developing software, learning about the software business 
+                and how to automate business processes, studying computer engineering and my free time is dedicaded to my hobbies
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Chess ♟️ Video Games 🎮 Anime 📺 Gym 💪 Music 🥁
-                Hiking⛰️
+                Chess ♟️ Video Games 🎮 Anime 📺 Music 🎵
+                Hiking ⛰️
               </Text>
-            </Grid>
-          </Grid>
-          <Grid sm={10} md={7} style={{ marginTop: '45px', display: 'block' }}>
-            <Grid sm={12} md={12} style={{ display: 'flex' }}>
-              <Image
-                src="/code.png"
-                alt="habilidades de desarrollo de juan rodriguez montero"
-                width={50}
-                height={50}
-              ></Image>
-              <Text h2 color="white">
-                &nbsp; SKILLS
-              </Text>
-            </Grid>
-            <Grid sm={12} md={12} style={{ display: 'block' }}>
-              <Text h3 color="white">
-                FrontEnd
-              </Text>
-              <Spacer y={1} />
-              <Grid.Container gap={1} justify="flex-start">
-                {frontendSkills.map((item, index) => (
-                  <Grid xs={3} sm={2} key={index}>
-                    <Image
-                      src={`/frontEndSkills/${item}.png`}
-                      width={65}
-                      height={65}
-                      alt={item}
-                    />
-                  </Grid>
-                ))}
-              </Grid.Container>
-              <Spacer y={3} />
-              <Text h3 color="white">
-                BackEnd
-              </Text>
-              <Spacer y={1} />
-              <Grid.Container gap={1} justify="flex-start">
-                {backendSkills.map((item, index) => (
-                  <Grid xs={3} sm={2} key={index}>
-                    <Image
-                      src={`/backEndSkills/${item}.png`}
-                      width={65}
-                      height={65}
-                      alt={item}
-                    />
-                  </Grid>
-                ))}
-              </Grid.Container>
-              <Spacer y={3} />
-              <Text h3 color="white">
-                Used Languages
-              </Text>
-              <Spacer y={1} />
-              <Grid.Container gap={1} justify="flex-start">
-                {languajes.map((item, index) => (
-                  <Grid xs={3} sm={2} key={index}>
-                    <Image
-                      src={`/languages/${item}.png`}
-                      width={65}
-                      height={65}
-                      alt={item}
-                    />
-                  </Grid>
-                ))}
-              </Grid.Container>
-              <Spacer y={3} />
-              <Text h3 color="white">
-                Management
-              </Text>
-              <Spacer y={1} />
-              <Grid.Container gap={1} justify="flex-start">
-                {management.map((item, index) => (
-                  <Grid xs={3} sm={2} key={index}>
-                    <Image
-                      src={`/management/${item}.png`}
-                      width={65}
-                      height={65}
-                      alt={item}
-                    />
-                  </Grid>
-                ))}
-              </Grid.Container>
-              <Spacer y={3} />
-              <Text h3 color="white">
-                Technical Support
-              </Text>
-              <Spacer y={1} />
-              <Grid.Container gap={1} justify="flex-start">
-                {technicalSupport.map((item, index) => (
-                  <Grid xs={3} sm={2} key={index}>
-                    <Image
-                      src={`/support/${item}.png`}
-                      width={65}
-                      height={65}
-                      alt={item}
-                    />
-                  </Grid>
-                ))}
-              </Grid.Container>
             </Grid>
           </Grid>
         </Grid.Container>

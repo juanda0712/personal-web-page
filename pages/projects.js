@@ -30,10 +30,10 @@ export default function Projects() {
           }}
         >
           <Text h1 size={40} color="white">
-            Web Projects - Personal
+            Web Projects
           </Text>
           <Text h2 size={20} color="white">
-            These are some of my most recent web projects that you can visit
+            These are some of my most recent personal web projects that you can visit
           </Text>
         </div>
         <Spacer y={2} />
@@ -105,10 +105,10 @@ export default function Projects() {
           }}
         >
           <Text h1 size={40} color="white">
-            Desktop Projects - Academic
+            Desktop Projects
           </Text>
           <Text h2 size={20} color="white">
-            These are some of my desktop projects that you can watch
+            These are some of my academic projects that you can watch
           </Text>
         </div>
         <Spacer y={2} />

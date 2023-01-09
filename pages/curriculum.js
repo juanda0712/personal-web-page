@@ -17,7 +17,7 @@ export default function CurriculumScreen() {
       WebViewer(
         {
           path: '/lib',
-          initialDoc: '/files/JUAN-RM-RESUME-ENG.pdf',
+          initialDoc: '/files/JUAN_ENG_RESUME.pdf',
         },
         viewer.current
       ).then((instance) => {
@@ -54,8 +54,8 @@ export default function CurriculumScreen() {
   useEffect(() => {
     const pdfSrc =
       curriculumLanguage === 'eng'
-        ? '/files/JUAN-RM-RESUME-ENG.pdf'
-        : '/files/JUAN-RM-RESUME-SPANISH.pdf';
+        ? '/files/JUAN_ENG_RESUME.pdf'
+        : '/files/JUAN_ESP_RESUME.pdf';
     if (ins.current) {
       ins.current.loadDocument(pdfSrc);
     }

@@ -9,7 +9,8 @@ export const Header = () => {
   const { navstate } = nav;
   const collapsePages = [
     { name: 'Home Page', slug: '/' },
-    { name: 'Projects', slug: 'projects' },
+    { name: 'Projects </>', slug: 'projects' },
+    { name: 'Skills', slug: 'skills' },
     { name: 'CV', slug: 'curriculum' },
   ];
 
@@ -50,7 +51,7 @@ export const Header = () => {
               href="projects"
               style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
             >
-              Projects
+               Projects &lt;/&gt;
             </Link>
           </Navbar.Link>
         ) : (
@@ -59,11 +60,29 @@ export const Header = () => {
               href="projects"
               style={{ color: 'black', fontWeight: 'bold' }}
             >
-              Projects
+              Projects &lt;/&gt;
             </Link>
           </Navbar.Link>
         )}
-
+        {navstate === 'skills' ? (
+          <Navbar.Link as="div" isActive>
+            <Link
+              href="skills"
+              style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
+            >
+              Skills
+            </Link>
+          </Navbar.Link>
+        ) : (
+          <Navbar.Link as="div">
+            <Link
+              href="skills"
+              style={{ color: 'black', fontWeight: 'bold' }}
+            >
+              Skills
+            </Link>
+          </Navbar.Link>
+        )}
         {navstate === 'cv' ? (
           <Navbar.Link as="div" isActive>
             <Link

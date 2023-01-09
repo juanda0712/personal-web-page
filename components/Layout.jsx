@@ -12,10 +12,9 @@ export default function Layout({ children, title }) {
         <meta name="description" content="Juan Rodriguez Montero Web Site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script defer src="https://app.embed.im/snow.js"></Script>
       <div
         style={{
-          backgroundImage: 'linear-gradient( #002354, #1f7296)',
+          backgroundColor: '#232c34',
           display: 'flex',
           minHeight: '100vh',
           flexDirection: 'column',

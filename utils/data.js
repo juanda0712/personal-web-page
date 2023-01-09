@@ -33,7 +33,7 @@ const data = {
       },
       url: 'https://xkcd-web-app-and-scraper.vercel.app/',
     },
-    {
+    /* {
       title: 'Blog JuanDa',
       description:
         'It is a very basic project to create a basic blog structure',
@@ -43,7 +43,7 @@ const data = {
         frontend: ['html5', 'css3'],
       },
       url: 'https://basic-blog-roan.vercel.app/',
-    },
+    }, */
   ],
   desktop: [
     {
