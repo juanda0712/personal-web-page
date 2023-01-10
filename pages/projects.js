@@ -41,9 +41,9 @@ export default function Projects() {
           {projects.map((project) => (
             <Grid  xs={12} md={6} key={project.url} justify='center'>
             <Link href={project.url} target="_blank" >
-                <Card isPressable style={{ backgroundColor: '#e0e0e0', width: 400, height: 650 }}>
+                <Card isPressable >
                   <Card.Header>
-                    <div>
+                    <div style={{display:'flex', flexDirection: 'column', maxWidth:400 }}>
                       <Text
                         h3
                         css={{

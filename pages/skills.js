@@ -32,12 +32,7 @@ export default function Skills(){
                     justifyContent: 'center',
                     justifyItems: 'center'
                  }}>
-              <Image
-                src="/code.png"
-                alt="habilidades de desarrollo de juan rodriguez montero"
-                width={50}
-                height={50}
-              ></Image>
+
               <Text h2 color="white">
                 &nbsp; SKILLS
               </Text>
@@ -48,7 +43,7 @@ export default function Skills(){
                     flexDirection: 'column',
                     justifyContent: 'center',
                  }}>
-                    <Spacer y={3} />
+                    <Spacer y={1} />
                     <Text h3 color="white" style={{textAlign: 'center'}}>
                     Used Languages
                     </Text>

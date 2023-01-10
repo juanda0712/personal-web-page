@@ -67,19 +67,22 @@ export default function CurriculumScreen() {
         gap={2}
         style={{
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
         }}
       >
-        <Grid style={{ display: 'inline-flex', flexWrap: 'wrap', gap: '10px' }}>
+        <Grid xs={6} md={6} justify='center'>
           <Button
+            size= {isMd ? "sm" : "md"}
             onClick={() => setCurriculumLanguage('eng')}
             style={{ background: 'e0e0e0', color: '002354' }}
           >
             English CV
           </Button>
-          <Button
+        </Grid>
+        <Grid xs={6} md={6} justify='center'>
+        <Button
+            size= {isMd ? "sm" : "md"}
             onClick={() => setCurriculumLanguage('esp')}
             style={{ background: 'e0e0e0', color: '002354' }}
           >
@@ -88,7 +91,7 @@ export default function CurriculumScreen() {
         </Grid>
         {isMd ? (
           <Grid justify="center">
-            <div ref={viewer} style={{ height: '100vh' }} />
+            <div ref={viewer} style={{ height: '70vh' }} />
           </Grid>
         ) : (
           <Grid justify="center">
