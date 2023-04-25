@@ -19,15 +19,17 @@ export default function Home() {
     Cookies.set('nav', JSON.stringify({ navstate: 'home' }));
   }, [dispatch]);
 
-  const frontendSkills = [
-    'javascript',
-    'react',
-    'nextjs',
-  ];
+  const frontendSkills = ['javascript', 'react', 'nextjs'];
   const backendSkills = ['nodejs', 'aspdotnet2', 'mysql', 'mongodb'];
-  const languajes = ['javascript', 'csharp','c++', 'java'];
+  const languajes = ['javascript', 'csharp', 'c++', 'java'];
   const management = ['git2', 'azureDevOps', 'docker'];
-  const technicalSupport = ['technicalSupport', 'cisco2', 'virtualization','office365', 'linux'];
+  const technicalSupport = [
+    'technicalSupport',
+    'cisco2',
+    'virtualization',
+    'office365',
+    'linux',
+  ];
 
   return (
     <Layout title="Home">
@@ -59,7 +61,7 @@ export default function Home() {
                   }}
                 >
                   <Image
-                    src="/perfil2.jpeg"
+                    src="/insta.png"
                     alt="Foto pagina web juan rodriguez montero"
                     width={350}
                     height={300}
@@ -127,19 +129,20 @@ export default function Home() {
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Very curious person and a quick learner.
-                with a great interest in working on demanding and
-                new projects that have a positive impact on productivity
+                Very curious person and a quick learner. with a great interest
+                in working on demanding and new projects that have a positive
+                impact on productivity
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Currently, I spend my time developing software, learning about the software business 
-                and how to automate business processes, studying computer engineering and my free time is dedicaded to my hobbies
+                Currently, I spend my time developing software, learning about
+                the software business and how to automate business processes,
+                studying computer engineering and my free time is dedicaded to
+                my hobbies
               </Text>
               <Spacer y={0.6} />
               <Text size={16} color="white">
-                Chess ♟️ Video Games 🎮 Anime 📺 Music 🎵
-                Hiking ⛰️
+                Chess ♟️ Video Games 🎮 Anime 📺 Music 🎵 Hiking ⛰️
               </Text>
             </Grid>
           </Grid>
