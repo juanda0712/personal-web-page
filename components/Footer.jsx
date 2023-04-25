@@ -9,9 +9,9 @@ export const Footer = () => {
     <>
       <Grid.Container justify="center" style={{ backgroundColor: '#e0e0e0' }}>
         <Grid sm={12} md={12} justify="center">
-          <Text style={{ textAlign: 'center' }}>      
-            If you are interested in working with me on your projects, please do not hesitate to
-            contact me
+          <Text style={{ textAlign: 'center' }}>
+            If you are interested in working with me on your projects, please do
+            not hesitate to contact me
           </Text>
         </Grid>
         <Spacer y={0.5} />
@@ -50,7 +50,7 @@ export const Footer = () => {
         <Spacer y={0.5} />
 
         <Grid sm={12} md={12} justify="center">
-          <Text>© 2022 Juan Rodríguez Montero</Text>
+          <Text>© 2023 Juan Rodríguez Montero</Text>
         </Grid>
       </Grid.Container>
     </>
