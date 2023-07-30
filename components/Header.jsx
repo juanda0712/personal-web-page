@@ -11,7 +11,7 @@ export const Header = () => {
     { name: 'Inicio', slug: '/' },
     { name: 'Proyectos </>', slug: 'projects' },
     { name: 'Skills', slug: 'skills' },
-    { name: 'CV', slug: 'curriculum' },
+    { name: 'CV', slug: 'cv' },
   ];
 
   return (
@@ -90,7 +90,7 @@ export const Header = () => {
         {navstate === 'cv' ? (
           <Navbar.Link as="div" isActive>
             <Link
-              href="curriculum"
+              href="cv"
               style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
               CV
@@ -98,10 +98,7 @@ export const Header = () => {
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
-            <Link
-              href="curriculum"
-              style={{ color: 'black', fontWeight: 'bold' }}
-            >
+            <Link href="cv" style={{ color: 'black', fontWeight: 'bold' }}>
               CV
             </Link>
           </Navbar.Link>
