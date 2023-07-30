@@ -7,18 +7,24 @@ import Whatsapp from '../public/SVGs/Whatsapp.svg';
 export const Footer = () => {
   return (
     <>
-      <Grid.Container justify="center" style={{ backgroundColor: '#e0e0e0' }}>
+      <Grid.Container
+        justify="center"
+        style={{
+          backgroundColor: '#e0e0e0',
+          display: 'block',
+          margin: '0 auto',
+        }}
+      >
         <Grid sm={12} md={12} justify="center">
           <Text style={{ textAlign: 'center' }}>
-            If you are interested in working with me on your projects, please do
-            not hesitate to contact me
+            ¿Interesado/a en trabajar juntos? ¡Contáctame y hablamos!
           </Text>
         </Grid>
         <Spacer y={0.5} />
         <Grid sm={12} md={12} justify="center" style={{ display: 'flex' }}>
           <Link
             style={{ marginRight: '14px' }}
-            href="mailto:juanrm071299@gmail.com,juan.rodriguez@estudiantec.cr"
+            href="mailto:juan.rodriguez@jdrodriguez.dev, juanrm071299@gmail.com"
           >
             <Gmail viewBox="0 0 50 50" />
           </Link>
@@ -47,10 +53,9 @@ export const Footer = () => {
             <Whatsapp viewBox="0 0 50 50" />
           </Link>
         </Grid>
-        <Spacer y={0.5} />
-
+        <Spacer y={0.1} />
         <Grid sm={12} md={12} justify="center">
-          <Text>© 2023 Juan Rodríguez Montero</Text>
+          <Text style={{ textAlign: 'center' }}>© 2023 JRM</Text>
         </Grid>
       </Grid.Container>
     </>

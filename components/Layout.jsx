@@ -2,19 +2,21 @@ import { Spacer } from '@nextui-org/react';
 import Head from 'next/head';
 import { Footer } from './Footer.jsx';
 import { Header } from './Header.jsx';
-import Script from 'next/script';
 
 export default function Layout({ children, title }) {
   return (
     <>
       <Head>
         <title>{title ? 'JRM - ' + title : 'JRM - Web'}</title>
-        <meta name="description" content="Juan Rodriguez Montero Web Site" />
+        <meta
+          name="description"
+          content="Sitio web de Juan Rodríguez Montero"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
         style={{
-          backgroundColor: '#232c34',
+          backgroundColor: '#828587 ',
           display: 'flex',
           minHeight: '100vh',
           flexDirection: 'column',

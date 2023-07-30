@@ -1,4 +1,4 @@
-import { Navbar, Text } from '@nextui-org/react';
+import { Navbar, Text, Image } from '@nextui-org/react';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { Store } from '../utils/Store';
@@ -8,8 +8,8 @@ export const Header = () => {
   const { nav } = state;
   const { navstate } = nav;
   const collapsePages = [
-    { name: 'Home Page', slug: '/' },
-    { name: 'Projects </>', slug: 'projects' },
+    { name: 'Inicio', slug: '/' },
+    { name: 'Proyectos </>', slug: 'projects' },
     { name: 'Skills', slug: 'skills' },
     { name: 'CV', slug: 'curriculum' },
   ];
@@ -18,13 +18,17 @@ export const Header = () => {
     <Navbar variant="sticky">
       <Link href="/">
         <Navbar.Brand style={{ color: 'black' }}>
-          <Text b color="inherit" weight="bold" size={22}>
-            JRM
-          </Text>
-          <Text color="inherit" size={17.5}>
+          <Image
+            width={110}
+            height={30}
+            src="/logo.png"
+            alt="Logo de JRM"
+            objectFit="cover"
+          />
+          <Text color="inherit" size={19}>
             &nbsp; | &nbsp;
           </Text>
-          <Text b color="inherit" size={17.5}>
+          <Text b color="inherit" size={19.5}>
             Juan Rodríguez Montero
           </Text>
         </Navbar.Brand>
@@ -34,14 +38,17 @@ export const Header = () => {
       <Navbar.Content hideIn="xs" variant="underline">
         {navstate === 'home' ? (
           <Navbar.Link as="div" isActive>
-            <Link href="/" style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}>
-              Home Page
+            <Link
+              href="/"
+              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
+            >
+              Inicio
             </Link>
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
             <Link href="/" style={{ color: 'black', fontWeight: 'bold' }}>
-              Home Page
+              Inicio
             </Link>
           </Navbar.Link>
         )}
@@ -49,9 +56,9 @@ export const Header = () => {
           <Navbar.Link as="div" isActive>
             <Link
               href="projects"
-              style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
+              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
-               Projects &lt;/&gt;
+              Proyectos &lt;/&gt;
             </Link>
           </Navbar.Link>
         ) : (
@@ -60,7 +67,7 @@ export const Header = () => {
               href="projects"
               style={{ color: 'black', fontWeight: 'bold' }}
             >
-              Projects &lt;/&gt;
+              Proyectos &lt;/&gt;
             </Link>
           </Navbar.Link>
         )}
@@ -68,17 +75,14 @@ export const Header = () => {
           <Navbar.Link as="div" isActive>
             <Link
               href="skills"
-              style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
+              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
               Skills
             </Link>
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
-            <Link
-              href="skills"
-              style={{ color: 'black', fontWeight: 'bold' }}
-            >
+            <Link href="skills" style={{ color: 'black', fontWeight: 'bold' }}>
               Skills
             </Link>
           </Navbar.Link>
@@ -87,7 +91,7 @@ export const Header = () => {
           <Navbar.Link as="div" isActive>
             <Link
               href="curriculum"
-              style={{ color: 'black', fontWeight: 'bold', fontSize:19 }}
+              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
               CV
             </Link>

@@ -1,6 +1,5 @@
-import { Card, Grid, Spacer, Text } from '@nextui-org/react';
+import { Grid, Spacer, Text } from '@nextui-org/react';
 import Image from 'next/image';
-import { Box } from '../components/Box';
 import Layout from '../components/Layout';
 import Gmail from '../public/SVGs/Gmail.svg';
 import Github from '../public/SVGs/Github.svg';
@@ -33,21 +32,25 @@ export default function Home() {
 
   return (
     <Layout title="Home">
-      <Box css={{ px: '$12', mt: '$8', '@xsMax': { px: '$10' } }}>
-        <Grid.Container justify="center">
-          <Grid sm={10} md={7}>
-            <Grid
-              sm={12}
-              md={6}
-              alignItems="center"
-              justify="center"
+      <Grid.Container justify="center">
+        <Grid sm={8} md={9}>
+          <Grid
+            sm={12}
+            md={6}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'centers',
+            }}
+          >
+            <div
               style={{
                 display: 'block',
                 alignItems: 'center',
                 margin: '0 auto',
               }}
             >
-              <Grid sm={12} md={12} alignItems="center">
+              <Grid sm={12} md={12}>
                 <div
                   style={{
                     borderRadius: '50%',
@@ -82,7 +85,7 @@ export default function Home() {
               >
                 <Link
                   style={{ marginRight: '14px' }}
-                  href="mailto:juanrm071299@gmail.com,juan.rodriguez@estudiantec.cr"
+                  href="mailto:juan.rodriguez@jdrodriguez.dev, juanrm071299@gmail.com"
                 >
                   <Gmail viewBox="0 0 45 45" />
                 </Link>
@@ -111,43 +114,97 @@ export default function Home() {
                   <Whatsapp viewBox="0 0 45 45" />
                 </Link>
               </Grid>
-            </Grid>
-            <Grid
-              sm={12}
-              md={6}
-              style={{
-                display: 'block',
-                textAlign: 'center',
-              }}
-            >
-              <Text h1 size={35} color="white">
-                Hello World! 👋, I&apos;m JuanDa
-              </Text>
-              <Spacer y={0.6} />
-              <Text size={16} color="white">
-                Passionate about technology since I can remember
-              </Text>
-              <Spacer y={0.6} />
-              <Text size={16} color="white">
-                Very curious person and a quick learner. with a great interest
-                in working on demanding and new projects that have a positive
-                impact on productivity
-              </Text>
-              <Spacer y={0.6} />
-              <Text size={16} color="white">
-                Currently, I spend my time developing software, learning about
-                the software business and how to automate business processes,
-                studying computer engineering and my free time is dedicaded to
-                my hobbies
-              </Text>
-              <Spacer y={0.6} />
-              <Text size={16} color="white">
-                Chess ♟️ Video Games 🎮 Anime 📺 Music 🎵 Hiking ⛰️
-              </Text>
-            </Grid>
+            </div>
           </Grid>
-        </Grid.Container>
-      </Box>
+          <Grid
+            sm={12}
+            md={6}
+            style={{
+              display: 'block',
+              textAlign: 'center',
+            }}
+          >
+            <Text h1 size={35} color="white">
+              Hola Mundo!👋, Soy JuanDa
+            </Text>
+            <Spacer y={0.3} />
+            <Text size={16} color="white">
+              Soy un apasionado de la tecnología y un entusiasta aprendiz. Mi
+              enfoque está en el desarrollo e ingenieria.
+            </Text>
+            <Spacer y={0.4} />
+            <Text size={16} color="white">
+              Además, tengo un gran interés en la automatización de procesos de
+              negocio mediante el uso de soluciones SaaS. Estoy emocionado por
+              explorar cómo la tecnología mejora la eficiencia de los procesos
+              de negocio.
+            </Text>
+            <Spacer y={0.4} />
+            <Text size={16} color="white">
+              Si deseas saber más sobre mi experiencia y habilidades, no dudes
+              en contactarme. Estoy entusiasmado por unirme a tus proyectos y
+              colaborar con equipos innovadores, siempre dispuestos a aprender y
+              adaptarse.
+            </Text>
+          </Grid>
+        </Grid>
+      </Grid.Container>
+      <Spacer y={4} />
+      <Grid.Container justify="center">
+        <Grid sm={10} md={7}>
+          <Grid
+            sm={12}
+            md={6}
+            style={{
+              display: 'block',
+              textAlign: 'center',
+            }}
+          >
+            <Link
+              href="https://www.youtube.com/watch?v=ESwSDfuQTtY&ab_channel=Tecnol%C3%B3gicodeCostaRica"
+              target="_black"
+              rel="noreferrer"
+            >
+              <Image
+                src="/ce.jpeg"
+                alt="Foto pagina web juan rodriguez montero"
+                width={200}
+                height={200}
+                style={{
+                  borderRadius: '10%',
+                  borderStyle: 'solid',
+                }}
+              />
+            </Link>
+          </Grid>
+          <Spacer y={2} />
+          <Grid
+            sm={12}
+            md={6}
+            style={{
+              display: 'block',
+              textAlign: 'center',
+            }}
+          >
+            <Link
+              href="https://www.youtube.com/watch?v=H5Xot7s0IT8&ab_channel=Tecnol%C3%B3gicodeCostaRica"
+              target="_black"
+              rel="noreferrer"
+            >
+              <Image
+                src="/tec2.png"
+                alt="Foto pagina web juan rodriguez montero"
+                width={200}
+                height={200}
+                style={{
+                  borderRadius: '10%',
+                  borderStyle: 'solid',
+                }}
+              />
+            </Link>
+          </Grid>
+        </Grid>
+      </Grid.Container>
     </Layout>
   );
 }

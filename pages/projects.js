@@ -19,31 +19,79 @@ export default function Projects() {
     Cookies.set('nav', JSON.stringify({ navstate: 'projects' }));
   }, [dispatch]);
 
+  const containerStyle = {
+    position: 'relative',
+    alignItems: 'center',
+  };
+
+  const buttonStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'rgba(130, 133, 135, 0.9)',
+    color: 'white',
+    padding: '10px 20px',
+    textDecoration: 'none',
+    borderRadius: '5px',
+    border: '2px solid black',
+  };
+
+  const imageStyle = {
+    margin: '10px 0',
+  };
+
   return (
     <Layout title="Projects">
       <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Text h1 size={40} color="white">
-            Web Projects
-          </Text>
-          <Text h2 size={20} color="white">
-            These are some of my most recent personal web projects that you can visit
-          </Text>
-        </div>
-        <Spacer y={2} />
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Text h1 size={40} color="white">
+          Aplicaciones Web
+        </Text>
+        <Text h2 size={20} color="white" style={{ maxWidth: '60rem' }}>
+          Te invito a explorar algunos de mis proyectos más recientes. ¡Espero
+          que disfrutes visitarlos!.
+        </Text>
+      </div>
+      <Spacer y={2} />
       <Grid.Container justify="center">
-          {projects.map((project) => (
-            <Grid  xs={12} md={6} key={project.url} justify='center'>
-            <Link href={project.url} target="_blank" >
-                <Card isPressable >
-                  <Card.Header>
-                    <div style={{display:'flex', flexDirection: 'column', maxWidth:400 }}>
+        {projects.map((project) => (
+          <div key={project.url} style={{ width: '100%' }}>
+            <Grid xs={12} md={12} justify="center">
+              <Grid.Container justify="center">
+                <Grid
+                  sm={8}
+                  md={9}
+                  style={{
+                    backgroundColor: '#D1D1D1',
+                    border: 'solid',
+                    borderColor: '#A5A5A5',
+                  }}
+                >
+                  <Grid
+                    sm={12}
+                    md={6}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'centers',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'block',
+                        alignItems: 'center',
+                        margin: '0 auto',
+                        textAlign: 'center',
+                        maxWidth: '30rem',
+                      }}
+                    >
                       <Text
                         h3
                         css={{
@@ -54,70 +102,107 @@ export default function Projects() {
                         {project.title}
                       </Text>
                       <Text>{project.description}</Text>
+                      <Spacer y={1} />
+                      <Grid.Container justify="center" gap={0.5}>
+                        {project.technologies.frontend.map((tec) => (
+                          <Grid xs={3} sm={4} key={tec} justify="center">
+                            <Image
+                              src={`/frontEndSkills/${tec}.png`}
+                              width={40}
+                              height={45}
+                              alt={tec}
+                            ></Image>
+                          </Grid>
+                        ))}
+                        {project.technologies.backend.map((tec) => (
+                          <Grid xs={3} sm={4} key={tec} justify="center">
+                            <Image
+                              src={`/backEndSkills/${tec}.png`}
+                              width={40}
+                              height={45}
+                              alt={tec}
+                            ></Image>
+                          </Grid>
+                        ))}
+                      </Grid.Container>
                     </div>
-                  </Card.Header>
-                  <Card.Body>
-                    <Image
-                      src={`/projects/${project.image}.png`}
-                      width={360}
-                      height={350}
-                      alt={project.title}
-                      autoResize
-                      quality={80}
-                    />
-                  </Card.Body>
-                  <Card.Footer css={{ justifyItems: 'flex-start' }}>
-                    <Grid.Container justify="center" gap={0.5}>
-                      {project.technologies.frontend.map((tec) => (
-                        <Grid xs={3} sm={4} key={tec} justify="center">
-                          <Image
-                            src={`/frontEndSkills/${tec}.png`}
-                            width={40}
-                            height={45}
-                            alt={tec}
-                          ></Image>
-                        </Grid>
-                      ))}
-                      {project.technologies.backend.map((tec) => (
-                        <Grid xs={3} sm={4} key={tec} justify="center">
-                          <Image
-                            src={`/backEndSkills/${tec}.png`}
-                            width={40}
-                            height={45}
-                            alt={tec}
-                          ></Image>
-                        </Grid>
-                      ))}
-                    </Grid.Container>
-                  </Card.Footer>
-                </Card>
-              <Spacer y={2} />
-            </Link>
+                  </Grid>
+                  <Grid sm={12} md={6} justify="center" style={containerStyle}>
+                    <Link href={project.url} target="_blank">
+                      <Image
+                        src={`/projects/${project.image}.png`}
+                        alt={project.title}
+                        width={500}
+                        height={313}
+                        quality={70}
+                        priority={true}
+                        style={imageStyle}
+                      />
+                    </Link>
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      style={buttonStyle}
+                    >
+                      Visitar
+                    </Link>
+                  </Grid>
+                </Grid>
+              </Grid.Container>
             </Grid>
-          ))}
+            <Spacer y={3} />
+          </div>
+        ))}
       </Grid.Container>
       <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Text h1 size={40} color="white">
-            Desktop Projects
-          </Text>
-          <Text h2 size={20} color="white">
-            These are some of my academic projects that you can watch
-          </Text>
-        </div>
-        <Spacer y={2} />
-        <Grid.Container justify="center">
-          {desktop.map((project) => (
-            <Grid  xs={12} md={6} key={project.title} justify='center'>
-                <Card style={{ backgroundColor: '#e0e0e0', width: 450, height: 550 }}>
-                  <Card.Header>
-                    <div>
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Text h1 size={40} color="white">
+          Aplicaciones Escritorio
+        </Text>
+        <Text h2 size={20} color="white" style={{ maxWidth: '60rem' }}>
+          Estos proyectos académicos fueron desafiantes e interesantes para mi
+          equipo de trabajo.
+        </Text>
+      </div>
+      <Grid.Container justify="center">
+        {desktop.map((project) => (
+          <div key={project.title} style={{ width: '100%' }}>
+            <Spacer y={3} />
+            <Grid xs={12} md={12} justify="center">
+              <Grid.Container justify="center">
+                <Grid
+                  sm={8}
+                  md={9}
+                  style={{
+                    backgroundColor: '#D1D1D1',
+                    border: 'solid',
+                    borderColor: '#A5A5A5',
+                  }}
+                >
+                  <Grid
+                    sm={12}
+                    md={6}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'centers',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'block',
+                        alignItems: 'center',
+                        margin: '0 auto',
+                        textAlign: 'center',
+                        maxWidth: '30rem',
+                      }}
+                    >
                       <Text
                         h3
                         css={{
@@ -128,30 +213,38 @@ export default function Projects() {
                         {project.title}
                       </Text>
                       <Text>{project.description}</Text>
+                      <Spacer y={1} />
+                      <Grid.Container justify="center" gap={0.5}>
+                        {project.language.map((tec) => (
+                          <Grid sm={6} md={6} key={tec} justify="center">
+                            <Image
+                              src={`/languages/${tec}.png`}
+                              width={40}
+                              height={45}
+                              alt={tec}
+                            ></Image>
+                          </Grid>
+                        ))}
+                      </Grid.Container>
                     </div>
-                  </Card.Header>
-                  <Card.Body>
-                    <video  height="300" controls >
-                      <source src={`${project.src}.mp4`} type="video/mp4"/>
-                    </video>
-                  </Card.Body>
-                  <Card.Footer css={{ justifyItems: 'flex-start' }}>
-                    <Grid.Container justify="center" gap={0.5}>
-                      {project.language.map((tec) => (
-                        <Grid xs={3} sm={4} key={tec} justify="center">
-                          <Image
-                            src={`/languages/${tec}.png`}
-                            width={55}
-                            height={60}
-                            alt={tec}
-                          ></Image>
-                        </Grid>
-                      ))}
-                    </Grid.Container>
-                  </Card.Footer>
-                </Card>
+                  </Grid>
+                  <Grid sm={12} md={6} justify="center" style={containerStyle}>
+                    <div
+                      style={{
+                        margin: '10px 0',
+                      }}
+                    >
+                      <video width="370rem" height="300rem" controls>
+                        <source src={`${project.src}.mp4`} type="video/mp4" />
+                        Tu navegador no soporta el elemento de video.
+                      </video>
+                    </div>
+                  </Grid>
+                </Grid>
+              </Grid.Container>
             </Grid>
-          ))}
+          </div>
+        ))}
       </Grid.Container>
     </Layout>
   );
