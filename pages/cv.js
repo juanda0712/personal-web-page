@@ -1,7 +1,4 @@
-import { useState } from 'react';
-
 export default function Cv() {
-  const [language, setLanguage] = useState('ESP');
   return (
     <div
       style={{
