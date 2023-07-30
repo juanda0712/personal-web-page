@@ -91,6 +91,7 @@ export const Header = () => {
           <Navbar.Link as="div" isActive>
             <Link
               href="cv"
+              target="_blank"
               style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
               CV
@@ -98,7 +99,11 @@ export const Header = () => {
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
-            <Link href="cv" style={{ color: 'black', fontWeight: 'bold' }}>
+            <Link
+              target="_blank"
+              href="cv"
+              style={{ color: 'black', fontWeight: 'bold' }}
+            >
               CV
             </Link>
           </Navbar.Link>

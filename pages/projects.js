@@ -1,4 +1,4 @@
-import { Card, Grid, Spacer, Text } from '@nextui-org/react';
+import { Grid, Spacer, Text } from '@nextui-org/react';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 import Link from 'next/link';

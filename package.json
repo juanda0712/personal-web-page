@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.10",
-    "@pdftron/webviewer": "^8.10.0",
     "@svgr/webpack": "^6.5.1",
     "eslint": "8.29.0",
     "eslint-config-next": "13.0.6",
