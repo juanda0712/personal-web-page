@@ -1,18 +1,25 @@
-import { Navbar, Text, Image } from '@nextui-org/react';
+import { Navbar, Text, Image, Dropdown } from '@nextui-org/react';
 import Link from 'next/link';
 import { useContext } from 'react';
 import { Store } from '../utils/Store';
+import { icons } from './Icons';
 
 export const Header = () => {
   const { state } = useContext(Store);
   const { nav } = state;
   const { navstate } = nav;
+
   const collapsePages = [
     { name: 'Inicio', slug: '/' },
     { name: 'Proyectos </>', slug: 'projects' },
     { name: 'Skills', slug: 'skills' },
-    { name: 'CV', slug: 'cv' },
+    { name: 'Español CV', slug: 'cv' },
+    { name: 'English CV', slug: 'en-cv' },
   ];
+
+  const handleDropdownClick = (key) => {
+    window.open(`/${key}`, '_blank');
+  };
 
   return (
     <Navbar variant="sticky">
@@ -87,27 +94,60 @@ export const Header = () => {
             </Link>
           </Navbar.Link>
         )}
-        {navstate === 'cv' ? (
-          <Navbar.Link as="div" isActive>
-            <Link
-              href="cv"
-              target="_blank"
-              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
+        <Dropdown isBordered>
+          <Navbar.Item>
+            <Dropdown.Button
+              auto
+              light
+              css={{
+                px: 0,
+                dflex: 'center',
+                svg: { pe: 'none' },
+              }}
+              ripple={false}
             >
-              CV
-            </Link>
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link as="div">
-            <Link
-              target="_blank"
-              href="cv"
-              style={{ color: 'black', fontWeight: 'bold' }}
+              Curriculum
+            </Dropdown.Button>
+          </Navbar.Item>
+          <Dropdown.Menu
+            aria-label="ACME features"
+            onAction={(key) => handleDropdownClick(key)}
+            css={{
+              $$dropdownMenuWidth: '340px',
+              $$dropdownItemHeight: '70px',
+              '& .nextui-dropdown-item': {
+                py: '$4',
+                // dropdown item left icon
+                svg: {
+                  color: '$secondary',
+                  mr: '$4',
+                },
+                // dropdown item title
+                '& .nextui-dropdown-item-content': {
+                  w: '100%',
+                  fontWeight: '$semibold',
+                },
+              },
+            }}
+          >
+            <Dropdown.Item
+              key="cv"
+              showFullDescription
+              description="Visualiza mi historial laboral, educación y habilidades en español."
+              icon={icons.spainFlag}
             >
-              CV
-            </Link>
-          </Navbar.Link>
-        )}
+              Español
+            </Dropdown.Item>
+            <Dropdown.Item
+              key="en-cv"
+              showFullDescription
+              description="Explore my work history, education, and skills in English."
+              icon={icons.uKFlag}
+            >
+              English
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Navbar.Content>
 
       <Navbar.Collapse disableAnimation>
