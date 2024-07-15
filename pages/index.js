@@ -142,9 +142,7 @@ export default function Home() {
             <Spacer y={0.4} />
             <Text size={16} color="white">
               Si deseas saber más sobre mi experiencia y habilidades, no dudes
-              en contactarme. Estoy entusiasmado por unirme a tus proyectos y
-              colaborar con equipos innovadores, siempre dispuestos a aprender y
-              adaptarse.
+              en contactarme.
             </Text>
           </Grid>
         </Grid>

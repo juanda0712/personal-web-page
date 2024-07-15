@@ -8,15 +8,12 @@ export default function Layout({ children, title }) {
     <>
       <Head>
         <title>{title ? 'JRM - ' + title : 'JRM - Web'}</title>
-        <meta
-          name="description"
-          content="Sitio web de Juan Rodríguez Montero"
-        />
+        <meta name="description" content="Portafolio JRM" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
         style={{
-          backgroundColor: '#828587 ',
+          backgroundColor: '#A3A5A7 ',
           display: 'flex',
           minHeight: '100vh',
           flexDirection: 'column',

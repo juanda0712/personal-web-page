@@ -41,8 +41,8 @@ export const Header = () => {
         </Navbar.Brand>
       </Link>
 
-      <Navbar.Toggle showIn="xs" />
-      <Navbar.Content hideIn="xs" variant="underline">
+      <Navbar.Toggle showIn="sm" />
+      <Navbar.Content hideIn="sm" variant="underline">
         {navstate === 'home' ? (
           <Navbar.Link as="div" isActive>
             <Link
@@ -144,7 +144,7 @@ export const Header = () => {
               description="Explore my work history, education, and skills in English."
               icon={icons.uKFlag}
             >
-              English
+              Ingles
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

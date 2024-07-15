@@ -29,7 +29,7 @@ export default function Projects() {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    backgroundColor: 'rgba(130, 133, 135, 0.9)',
+    backgroundColor: 'rgba(0, 114, 245, 0.9)',
     color: 'white',
     padding: '10px 20px',
     textDecoration: 'none',

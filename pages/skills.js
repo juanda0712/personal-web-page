@@ -7,16 +7,17 @@ import Image from 'next/image';
 
 export default function Skills() {
   const { dispatch } = useContext(Store);
-  const frontendSkills = ['react', 'nextjs'];
-  const backendSkills = ['nodejs', 'aspdotnet', 'postgresql', 'mongodb'];
+  const frontendSkills = ['react', 'angular', 'nextjs'];
+  const backendSkills = ['nodejs', 'dotnet'];
   const languajes = ['javascript', 'csharp', 'c++', 'java'];
-  const management = ['git', 'docker', 'azureDevOps'];
+  const devops = ['git', 'docker', 'azure'];
   const technicalSupport = [
     'technicalSupport',
     'cisco',
     'virtualization',
     'linux',
   ];
+  const dataBases = ['postgresql', 'mssql', 'mongodb'];
 
   useEffect(() => {
     dispatch({
@@ -27,7 +28,7 @@ export default function Skills() {
   }, [dispatch]);
 
   return (
-    <Layout>
+    <Layout title="Skills">
       <Grid.Container justify="center">
         <Grid
           sm={12}
@@ -53,7 +54,7 @@ export default function Skills() {
         >
           <Spacer y={1} />
           <Text h3 color="white" style={{ textAlign: 'center' }}>
-            Used Languages
+            Lenguajes mas utilizados
           </Text>
           <Spacer y={1} />
           <Grid.Container gap={1} justify="center">
@@ -81,7 +82,7 @@ export default function Skills() {
           }}
         >
           <Text h3 color="white" style={{ textAlign: 'center' }}>
-            Technical Support
+            Soporte Técnico
           </Text>
           <Spacer y={1} />
           <Grid.Container gap={1} justify="center">
@@ -166,14 +167,42 @@ export default function Skills() {
           }}
         >
           <Text h3 color="white" style={{ textAlign: 'center' }}>
-            Management
+            Bases de Datos
           </Text>
           <Spacer y={1} />
           <Grid.Container gap={1} justify="center">
-            {management.map((item, index) => (
+            {dataBases.map((item, index) => (
               <Grid xs={3} sm={2} key={index} justify="center">
                 <Image
-                  src={`/management/${item}.png`}
+                  src={`/basesDatos/${item}.png`}
+                  width={65}
+                  height={65}
+                  alt={item}
+                  title={item}
+                />
+              </Grid>
+            ))}
+          </Grid.Container>
+          <Spacer y={3} />
+        </Grid>
+        <Grid
+          xs={12}
+          md={12}
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+          }}
+        >
+          <Text h3 color="white" style={{ textAlign: 'center' }}>
+            DevOps
+          </Text>
+          <Spacer y={1} />
+          <Grid.Container gap={1} justify="center">
+            {devops.map((item, index) => (
+              <Grid xs={3} sm={2} key={index} justify="center">
+                <Image
+                  src={`/devops/${item}.png`}
                   width={65}
                   height={65}
                   alt={item}
