@@ -64,7 +64,7 @@ export default function Home() {
                   }}
                 >
                   <Image
-                    src="/insta.png"
+                    src="/insta.jpg"
                     alt="Foto pagina web juan rodriguez montero"
                     width={350}
                     height={300}
