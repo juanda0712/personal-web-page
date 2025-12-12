@@ -9,14 +9,13 @@ export const Header = () => {
 
   const collapsePages = [
     { name: 'Home', slug: '/' },
-    { name: 'Projects </>', slug: '/projects' }, // Asegúrate de usar / al inicio
-    { name: 'Skills', slug: '/skills' },
+    { name: 'Projects </>', slug: '/projects' },
+    //{ name: 'Skills', slug: '/skills' },
     { name: 'Español CV', slug: '/cv' },
     { name: 'English CV', slug: '/en-cv' },
   ];
 
   const handleDropdownClick = (key) => {
-    // Manejo seguro de rutas externas o internas
     if (key.includes('cv')) {
       window.open(`/${key}`, '_blank');
     }
@@ -75,7 +74,7 @@ export const Header = () => {
           </Link>
         </Navbar.Link>
 
-        {/* Enlace Skills */}
+        {/* Enlace Skills 
         <Navbar.Link isActive={isActive('/skills')} as="div">
           <Link
             href="/skills"
@@ -87,7 +86,7 @@ export const Header = () => {
           >
             Skills
           </Link>
-        </Navbar.Link>
+        </Navbar.Link>*/}
 
         <Dropdown isBordered>
           <Navbar.Item>
