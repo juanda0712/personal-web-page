@@ -831,7 +831,7 @@ export default function Projects() {
                   <Text color="#333" size={15} css={{ textAlign: 'justify' }}>
                     An analog audio mixing system controlled by a proximity
                     sensor. The circuit mixes two distinct audio sources (Signal
-                    1 & 2) proportionally based on the distance of the user's
+                    1 & 2) proportionally based on the distance of the user’s
                     hand.
                   </Text>
                   <Spacer y={0.5} />
