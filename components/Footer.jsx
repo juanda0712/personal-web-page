@@ -25,7 +25,7 @@ export const Footer = () => {
         <Grid sm={12} md={12} justify="center" style={{ display: 'flex' }}>
           <Link
             style={{ marginRight: '14px' }}
-            href="mailto:juan.rodriguez@jdrodriguez.dev, juanrm071299@gmail.com"
+            href="mailto:juanrm071299@gmail.com"
           >
             <Gmail viewBox="0 0 50 50" />
           </Link>
@@ -56,7 +56,7 @@ export const Footer = () => {
         </Grid>
         <Spacer y={0.1} />
         <Grid sm={12} md={12} justify="center">
-          <Text style={{ textAlign: 'center' }}>© 2023 JRM</Text>
+          <Text style={{ textAlign: 'center' }}>© 2025 JRM</Text>
         </Grid>
       </Grid.Container>
     </>

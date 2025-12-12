@@ -1,5 +1,6 @@
 import { Spacer } from '@nextui-org/react';
 import Head from 'next/head';
+// Asegúrate de importar tu Footer si lo tienes, o comenta la línea
 import { Footer } from './Footer.jsx';
 import { Header } from './Header.jsx';
 
@@ -13,7 +14,7 @@ export default function Layout({ children, title }) {
       </Head>
       <div
         style={{
-          backgroundColor: '#A3A5A7 ',
+          backgroundColor: '#A3A5A7', // Corregido: espacio eliminado
           display: 'flex',
           minHeight: '100vh',
           flexDirection: 'column',
@@ -24,18 +25,23 @@ export default function Layout({ children, title }) {
         <main
           style={{
             width: '100%',
-            margin: 'auto',
-            marginTop: '1rem',
-            padding: '1rem 1rem',
+            maxWidth: '1200px', // Añadido para que no se estire demasiado en pantallas gigantes
+            margin: '0 auto',
+            padding: '2rem 1rem',
+            flex: 1,
           }}
         >
           {children}
         </main>
-        <Spacer y={4} />
 
-        <footer>
-          <Footer />
-        </footer>
+        {/* Renderiza el Footer solo si el componente existe */}
+        {typeof Footer !== 'undefined' ? (
+          <footer>
+            <Footer />
+          </footer>
+        ) : (
+          <Spacer y={2} />
+        )}
       </div>
     </>
   );

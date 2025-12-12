@@ -31,7 +31,7 @@ export default function Projects() {
     borderRadius: '10px',
     overflow: 'hidden',
     border: '1px solid #333',
-    margin: '10px auto',
+    margin: '10px auto', // Margen por defecto
     display: 'flex',
     justifyContent: 'center',
     maxWidth: '100%',
@@ -65,13 +65,14 @@ export default function Projects() {
         <Text
           h1
           size={50}
-          css={{ textGradient: '45deg, $blue600 -20%, $red600 50%' }}
+          css={{ textGradient: '45deg, $accents9 10%, $blue900 80%' }}
           weight="bold"
         >
           Featured Projects
         </Text>
         <Text h2 size={24} color="white" style={{ maxWidth: '55rem' }}>
-          A showcase of Engineering, Architecture, and IoT solutions.
+          A selection of engineering, architecture, and IoT solutions in which I
+          have participated.
         </Text>
       </div>
       <Spacer y={2} />
@@ -200,7 +201,7 @@ export default function Projects() {
                         width={250}
                         height={180}
                         alt="Architecture Dev"
-                        objectFit="contain"
+                        style={{ objectFit: 'contain' }}
                       />
                     </div>
                   </Grid>
@@ -214,7 +215,7 @@ export default function Projects() {
                         width={250}
                         height={180}
                         alt="Architecture Test"
-                        objectFit="contain"
+                        style={{ objectFit: 'contain' }}
                       />
                     </div>
                   </Grid>
@@ -228,7 +229,7 @@ export default function Projects() {
                         width={250}
                         height={180}
                         alt="Architecture Prod"
-                        objectFit="contain"
+                        style={{ objectFit: 'contain' }}
                       />
                     </div>
                   </Grid>
@@ -304,7 +305,7 @@ export default function Projects() {
                         width={400}
                         height={250}
                         alt="Git Strategy and Repo"
-                        objectFit="contain"
+                        style={{ objectFit: 'contain' }}
                       />
                     </div>
                   </Grid>
@@ -458,7 +459,7 @@ export default function Projects() {
                       width={700}
                       height={400}
                       alt="Smart Home Web Interface"
-                      objectFit="contain"
+                      style={{ objectFit: 'contain' }}
                     />
                   </div>
                 </Grid>
@@ -612,7 +613,7 @@ export default function Projects() {
                       width={800}
                       height={400}
                       alt="NIOS II Qsys Design"
-                      objectFit="contain"
+                      style={{ objectFit: 'contain' }}
                     />
                   </div>
                 </Grid>
@@ -698,11 +699,14 @@ export default function Projects() {
                       <div style={imageContainerStyle}>
                         {/* Main Image */}
                         <Image
-                          src="/fpga/vga-game-1.jpg"
+                          src="/fpga/vga-game-3.jpg"
                           width={500}
                           height={300}
                           alt="VGA Game Main Screen"
-                          objectFit="cover"
+                          style={{
+                            objectFit: 'cover',
+                            objectPosition: 'top center',
+                          }}
                         />
                       </div>
                     </Grid>
@@ -710,11 +714,11 @@ export default function Projects() {
                       <div style={imageContainerStyle}>
                         {/* Secondary Image 1 */}
                         <Image
-                          src="/fpga/vga-game-2.jpg"
+                          src="/fpga/vga-game-1.jpg"
                           width={250}
                           height={150}
                           alt="VGA Game Gameplay"
-                          objectFit="cover"
+                          style={{ objectFit: 'cover' }}
                         />
                       </div>
                     </Grid>
@@ -722,11 +726,13 @@ export default function Projects() {
                       <div style={imageContainerStyle}>
                         {/* Secondary Image 2 */}
                         <Image
-                          src="/fpga/vga-game-3.jpg"
+                          src="/fpga/vga-game-2.jpg"
                           width={250}
                           height={150}
                           alt="VGA Game Win State"
-                          objectFit="cover"
+                          style={{
+                            objectFit: 'cover',
+                          }}
                         />
                       </div>
                     </Grid>
@@ -757,22 +763,43 @@ export default function Projects() {
           </Text>
         </div>
 
-        {/* --- PROYECTO A: PROXIMITY AUDIO MIXER --- */}
+        {/* --- PROYECTO A: PROXIMITY AUDIO MIXER (AHORA CON 2 IMÁGENES) --- */}
         <Grid.Container gap={2} justify="center">
           <Grid xs={12} md={12}>
             <div style={sectionCardStyle}>
               <Grid.Container gap={2} alignItems="center">
-                {/* COLUMNA 1: IMAGEN DEL CIRCUITO */}
-                <Grid xs={12} md={6}>
+                {/* COLUMNA 1: IMÁGENES DEL CIRCUITO (APILADAS) */}
+                <Grid xs={12} md={6} direction="column">
+                  {/* Imagen Original */}
                   <div
-                    style={{ ...imageContainerStyle, backgroundColor: '#fff' }}
+                    style={{
+                      ...imageContainerStyle,
+                      backgroundColor: '#fff',
+                      margin: '0 auto 10px auto', // Ajuste de margen para apilar
+                    }}
                   >
                     <Image
                       src="/mixed-signals/mixer-circuit.jpg"
                       width={500}
                       height={300}
-                      alt="Audio Mixer Circuit"
-                      objectFit="contain"
+                      alt="Audio Mixer Circuit 1"
+                      style={{ objectFit: 'contain' }} // <-- CORREGIDO
+                    />
+                  </div>
+                  {/* Nueva Imagen (Diagrama) */}
+                  <div
+                    style={{
+                      ...imageContainerStyle,
+                      backgroundColor: '#fff',
+                      margin: '0 auto',
+                    }}
+                  >
+                    <Image
+                      src="/mixed-signals/mixer-circuit2.png"
+                      width={500}
+                      height={300}
+                      alt="Audio Mixer Circuit 2 (Diagram)"
+                      style={{ objectFit: 'contain' }} // <-- CORREGIDO
                     />
                   </div>
                 </Grid>
@@ -838,7 +865,7 @@ export default function Projects() {
 
         <Spacer y={2} />
 
-        {/* --- PROYECTO B: TDM TELEPHONE SYSTEM (UPDATED) --- */}
+        {/* --- PROYECTO B: TDM TELEPHONE SYSTEM (AHORA CON 2 IMÁGENES) --- */}
         <Grid.Container gap={2} justify="center">
           <Grid xs={12} md={12}>
             <div style={sectionCardStyle}>
@@ -905,17 +932,38 @@ export default function Projects() {
                   </ul>
                 </Grid>
 
-                {/* COLUMNA 2: IMAGEN DEL CIRCUITO */}
-                <Grid xs={12} md={6}>
+                {/* COLUMNA 2: IMÁGENES DEL CIRCUITO (APILADAS) */}
+                <Grid xs={12} md={6} direction="column">
+                  {/* Imagen Original */}
                   <div
-                    style={{ ...imageContainerStyle, backgroundColor: '#fff' }}
+                    style={{
+                      ...imageContainerStyle,
+                      backgroundColor: '#fff',
+                      margin: '0 auto 10px auto', // Ajuste de margen
+                    }}
                   >
                     <Image
                       src="/mixed-signals/tdm-circuit.png"
                       width={500}
                       height={300}
-                      alt="TDM System Circuit"
-                      objectFit="contain"
+                      alt="TDM System Circuit 1"
+                      style={{ objectFit: 'contain' }} // <-- CORREGIDO
+                    />
+                  </div>
+                  {/* Nueva Imagen (Diagrama) */}
+                  <div
+                    style={{
+                      ...imageContainerStyle,
+                      backgroundColor: '#fff',
+                      margin: '0 auto',
+                    }}
+                  >
+                    <Image
+                      src="/mixed-signals/tdm-circuit2.png"
+                      width={500}
+                      height={300}
+                      alt="TDM System Circuit 2 (Diagram)"
+                      style={{ objectFit: 'contain' }} // <-- CORREGIDO
                     />
                   </div>
                 </Grid>

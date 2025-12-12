@@ -1,30 +1,34 @@
 import { Navbar, Text, Image, Dropdown } from '@nextui-org/react';
 import Link from 'next/link';
-import { useContext } from 'react';
-import { Store } from '../utils/Store';
+import { useRouter } from 'next/router'; // Usamos useRouter para saber la ruta actual
 import { icons } from './Icons';
 
 export const Header = () => {
-  const { state } = useContext(Store);
-  const { nav } = state;
-  const { navstate } = nav;
+  const router = useRouter(); // Hook para obtener la ruta actual
+  const currentPath = router.pathname; // ej: "/", "/projects", "/skills"
 
   const collapsePages = [
     { name: 'Home', slug: '/' },
-    { name: 'Projects </>', slug: 'projects' },
-    { name: 'Skills', slug: 'skills' },
-    { name: 'Español CV', slug: 'cv' },
-    { name: 'English CV', slug: 'en-cv' },
+    { name: 'Projects </>', slug: '/projects' }, // Asegúrate de usar / al inicio
+    { name: 'Skills', slug: '/skills' },
+    { name: 'Español CV', slug: '/cv' },
+    { name: 'English CV', slug: '/en-cv' },
   ];
 
   const handleDropdownClick = (key) => {
-    window.open(`/${key}`, '_blank');
+    // Manejo seguro de rutas externas o internas
+    if (key.includes('cv')) {
+      window.open(`/${key}`, '_blank');
+    }
   };
+
+  // Función auxiliar para saber si el link está activo
+  const isActive = (path) => currentPath === path;
 
   return (
     <Navbar variant="sticky">
-      <Link href="/">
-        <Navbar.Brand style={{ color: 'black' }}>
+      <Link href="/" passHref>
+        <Navbar.Brand style={{ color: 'black', cursor: 'pointer' }}>
           <Image
             width={110}
             height={30}
@@ -43,57 +47,48 @@ export const Header = () => {
 
       <Navbar.Toggle showIn="sm" />
       <Navbar.Content hideIn="sm" variant="underline">
-        {navstate === 'home' ? (
-          <Navbar.Link as="div" isActive>
-            <Link
-              href="/"
-              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
-            >
-              Home
-            </Link>
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link as="div">
-            <Link href="/" style={{ color: 'black', fontWeight: 'bold' }}>
-              Home
-            </Link>
-          </Navbar.Link>
-        )}
-        {navstate === 'projects' ? (
-          <Navbar.Link as="div" isActive>
-            <Link
-              href="projects"
-              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
-            >
-              Projects &lt;/&gt;
-            </Link>
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link as="div">
-            <Link
-              href="projects"
-              style={{ color: 'black', fontWeight: 'bold' }}
-            >
-              Projects &lt;/&gt;
-            </Link>
-          </Navbar.Link>
-        )}
-        {navstate === 'skills' ? (
-          <Navbar.Link as="div" isActive>
-            <Link
-              href="skills"
-              style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
-            >
-              Skills
-            </Link>
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link as="div">
-            <Link href="skills" style={{ color: 'black', fontWeight: 'bold' }}>
-              Skills
-            </Link>
-          </Navbar.Link>
-        )}
+        {/* Enlace Home */}
+        <Navbar.Link isActive={isActive('/')} as="div">
+          <Link
+            href="/"
+            style={{
+              color: 'black',
+              fontWeight: isActive('/') ? 'bold' : 'normal',
+              fontSize: isActive('/') ? 19 : 16,
+            }}
+          >
+            Home
+          </Link>
+        </Navbar.Link>
+
+        {/* Enlace Projects */}
+        <Navbar.Link isActive={isActive('/projects')} as="div">
+          <Link
+            href="/projects"
+            style={{
+              color: 'black',
+              fontWeight: isActive('/projects') ? 'bold' : 'normal',
+              fontSize: isActive('/projects') ? 19 : 16,
+            }}
+          >
+            Projects &lt;/&gt;
+          </Link>
+        </Navbar.Link>
+
+        {/* Enlace Skills */}
+        <Navbar.Link isActive={isActive('/skills')} as="div">
+          <Link
+            href="/skills"
+            style={{
+              color: 'black',
+              fontWeight: isActive('/skills') ? 'bold' : 'normal',
+              fontSize: isActive('/skills') ? 19 : 16,
+            }}
+          >
+            Skills
+          </Link>
+        </Navbar.Link>
+
         <Dropdown isBordered>
           <Navbar.Item>
             <Dropdown.Button
@@ -110,19 +105,14 @@ export const Header = () => {
             </Dropdown.Button>
           </Navbar.Item>
           <Dropdown.Menu
-            aria-label="ACME features"
+            aria-label="CV Options"
             onAction={(key) => handleDropdownClick(key)}
             css={{
               $$dropdownMenuWidth: '340px',
               $$dropdownItemHeight: '70px',
               '& .nextui-dropdown-item': {
                 py: '$4',
-                // dropdown item left icon
-                svg: {
-                  color: '$secondary',
-                  mr: '$4',
-                },
-                // dropdown item title
+                svg: { color: '$secondary', mr: '$4' },
                 '& .nextui-dropdown-item-content': {
                   w: '100%',
                   fontWeight: '$semibold',
@@ -144,7 +134,7 @@ export const Header = () => {
               description="Explore my work history, education, and skills in English."
               icon={icons.uKFlag}
             >
-              Ingles
+              Inglés
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
@@ -154,13 +144,12 @@ export const Header = () => {
         {collapsePages.map((page) => (
           <Navbar.CollapseItem key={page.slug}>
             <Link
-              css={{
-                minWidth: '100%',
-              }}
-              style={{
-                color: 'black',
-              }}
               href={page.slug}
+              style={{
+                minWidth: '100%',
+                color: 'black',
+                display: 'block',
+              }}
             >
               {page.name}
             </Link>
