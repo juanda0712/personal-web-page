@@ -10,8 +10,8 @@ export const Header = () => {
   const { navstate } = nav;
 
   const collapsePages = [
-    { name: 'Inicio', slug: '/' },
-    { name: 'Proyectos </>', slug: 'projects' },
+    { name: 'Home', slug: '/' },
+    { name: 'Projects </>', slug: 'projects' },
     { name: 'Skills', slug: 'skills' },
     { name: 'Español CV', slug: 'cv' },
     { name: 'English CV', slug: 'en-cv' },
@@ -49,13 +49,13 @@ export const Header = () => {
               href="/"
               style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
-              Inicio
+              Home
             </Link>
           </Navbar.Link>
         ) : (
           <Navbar.Link as="div">
             <Link href="/" style={{ color: 'black', fontWeight: 'bold' }}>
-              Inicio
+              Home
             </Link>
           </Navbar.Link>
         )}
@@ -65,7 +65,7 @@ export const Header = () => {
               href="projects"
               style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}
             >
-              Proyectos &lt;/&gt;
+              Projects &lt;/&gt;
             </Link>
           </Navbar.Link>
         ) : (
@@ -74,7 +74,7 @@ export const Header = () => {
               href="projects"
               style={{ color: 'black', fontWeight: 'bold' }}
             >
-              Proyectos &lt;/&gt;
+              Projects &lt;/&gt;
             </Link>
           </Navbar.Link>
         )}

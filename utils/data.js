@@ -50,14 +50,14 @@ const data = {
     {
       title: 'Image Recovery',
       description:
-        'En este proyecto académico del curso de Algoritmos y Estructuras de Datos II, desarrollamos un sistema que recupera una imagen utilizando el algoritmo genético. El algoritmo genético es una técnica de inteligencia artificial que se inspira en la evolución biológica para resolver problemas de optimización y búsqueda. Funciona mediante la generación y evolución de soluciones candidatas a lo largo de múltiples generaciones, seleccionando y combinando las mejores soluciones para mejorar progresivamente los resultados. En el contexto de este proyecto, el algoritmo genético se utiliza para buscar y obtener la parte faltante de una imagen específica de manera eficiente y automatizada. ',
+        'In this academic project for the Algorithms and Data Structures II course, we developed a system that recovers an image using the genetic algorithm. The genetic algorithm is an artificial intelligence technique inspired by biological evolution to solve optimization and search problems. It works by generating and evolving candidate solutions over multiple generations, selecting and combining the best solutions to progressively improve the results. In the context of this project, the genetic algorithm is used to efficiently and automatically search for and obtain the missing part of a specific image.',
       src: 'projects/videos/imageRecovery',
       language: ['c++'],
     },
     {
       title: 'Breakout',
       description:
-        'Este proyecto se diseñó con arquitectura cliente-servidor en Java, donde el jugador se comunica exclusivamente con el servidor mediante el enfoque de sockets. Se implementaron los patrones de diseño Singleton para garantizar una única instancia del servidor y Observer para notificar a los jugadores sobre cambios en el estado del juego. El objetivo fue mejorar la eficiencia y escalabilidad del juego, proporcionando una experiencia de juego fluida y en tiempo real. ',
+        'This project was designed with a client-server architecture in Java, where the player communicates exclusively with the server using the sockets approach. We implemented the Singleton design pattern to ensure a single server instance and the Observer pattern to notify players of changes in the game state. The objective was to improve the efficiency and scalability of the game, providing a fluid and real-time gaming experience.',
       src: 'projects/videos/breakout',
       language: ['java'],
     },

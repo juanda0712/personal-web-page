@@ -125,24 +125,26 @@ export default function Home() {
             }}
           >
             <Text h1 size={35} color="white">
-              Hola Mundo!👋, Soy JuanDa
+              Hello, I’m Juan Daniel Rodríguez
             </Text>
             <Spacer y={0.3} />
             <Text size={16} color="white">
-              Soy un apasionado de la tecnología y un entusiasta aprendiz. Mi
-              enfoque está en el desarrollo e ingenieria.
+              I am a Computer Engineering student focused on software
+              development, embedded systems, and IT infrastructure. I am
+              committed to continuous learning and driven by how engineering can
+              solve real-world challenges.
             </Text>
             <Spacer y={0.4} />
             <Text size={16} color="white">
-              Además, tengo un gran interés en la automatización de procesos de
-              negocio mediante el uso de soluciones SaaS. Estoy emocionado por
-              explorar cómo la tecnología mejora la eficiencia de los procesos
-              de negocio.
+              I also have experience automating business processes through SaaS
+              solutions, helping organizations improve operational efficiency
+              and streamline workflows.
             </Text>
             <Spacer y={0.4} />
             <Text size={16} color="white">
-              Si deseas saber más sobre mi experiencia y habilidades, no dudes
-              en contactarme.
+              Feel free to explore my work to learn more about my experience,
+              projects, and technical skills. I’m open to new opportunities and
+              collaborations.
             </Text>
           </Grid>
         </Grid>

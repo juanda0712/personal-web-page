@@ -17,7 +17,8 @@ export const Footer = () => {
       >
         <Grid sm={12} md={12} justify="center">
           <Text style={{ textAlign: 'center' }}>
-            ¿Interesado/a en trabajar juntos? ¡Contáctame y hablamos!
+            Interested in working together? Feel free to reach out—I’d be happy
+            to connect.
           </Text>
         </Grid>
         <Spacer y={0.5} />
