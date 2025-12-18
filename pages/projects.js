@@ -344,7 +344,7 @@ export default function Projects() {
 
                   <div style={{ marginBottom: '15px' }}>
                     {[
-                      'Raspberry Pi Pico',
+                      'Raspberry Pi 4',
                       'Yocto Project',
                       'C/C++',
                       'Cross-Compilation',
